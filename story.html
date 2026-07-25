@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story — Simple Outdoor Solutions · Flagstaff, AZ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300..800&family=Instrument+Sans:ital,wght@0,400..600;1,400&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--sand:#f3ebdd;--sand-2:#e9dcc6;--ink:#211b13;--ink-2:#2f2719;--ink-soft:#5c5240;--rust:#bf5327;--rust-deep:#9a3f1c;--pine:#2f5d4e;--gold:#e2a44b;--line:rgba(33,27,19,.14)}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{background:var(--sand);color:var(--ink);font-family:'Instrument Sans',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}::selection{background:var(--rust);color:var(--sand)}
+  body::after{content:'';position:fixed;inset:0;z-index:200;pointer-events:none;opacity:.04;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .announce{background:var(--pine);color:var(--sand);text-align:center;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1rem}
+  header{position:sticky;top:0;z-index:100;background:rgba(243,235,221,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem clamp(1.2rem,4vw,3.5rem);gap:2rem;max-width:1180px;margin:0 auto}
+  .logo{display:flex;align-items:center;gap:.7rem;font-family:'Bricolage Grotesque',sans-serif;font-weight:700}
+  .logo .sos{display:grid;place-items:center;width:40px;height:40px;border-radius:9px;background:var(--rust)}
+  .logo .sos img{width:100%;height:100%;object-fit:contain;padding:5px}
+  .logo .full{line-height:1.05;font-size:.95rem}.logo .full small{display:block;font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.14em;color:var(--ink-soft);text-transform:uppercase}
+  .menu{display:flex;gap:2rem;font-size:.9rem;font-weight:500}.menu a{position:relative;padding:.3rem 0}
+  .menu a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--rust);transition:width .3s}.menu a:hover::after{width:100%}
+  @media(max-width:820px){.menu{display:none}}
+  .btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:600;font-size:.95rem;padding:.95rem 1.8rem;border-radius:100px;transition:transform .2s,box-shadow .2s,background .2s;will-change:transform}
+  .btn-primary{background:var(--rust);color:var(--sand);box-shadow:0 12px 34px -12px rgba(154,63,28,.7)}.btn-primary:hover{transform:translateY(-2px)}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink)}.btn-ghost:hover{background:var(--ink);color:var(--sand)}
+
+  /* hero */
+  .shero{position:relative;min-height:82svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(1.2rem,4vw,3.5rem) clamp(3rem,7vh,5rem);overflow:hidden;isolation:isolate}
+  .shero-img{position:absolute;inset:0;z-index:-3;background-image:url(images/story-hero.jpg);background-size:cover;background-position:center 55%;animation:kb 24s ease-out forwards}
+  @keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
+  .shero-scrim{position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(18,9,4,.15) 0%,transparent 34%,rgba(18,9,4,.55) 82%,rgba(18,9,4,.8) 100%)}
+  .shero .eyebrow{font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+  .shero h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(2.8rem,9vw,7rem);line-height:.92;letter-spacing:-.035em;color:#f7ede0;max-width:16ch;text-shadow:0 2px 34px rgba(0,0,0,.4)}
+  .shero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#f4b65e}
+
+  .wrap{max-width:1000px;margin:0 auto;padding:clamp(4rem,9vh,7rem) clamp(1.2rem,4vw,3.5rem)}
+  .kick{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rust-deep);display:flex;align-items:center;gap:.7rem;margin-bottom:1.3rem}.kick::before{content:'';width:22px;height:2px;background:var(--rust)}
+  .lead-serif{font-family:'Instrument Serif',serif;font-size:clamp(1.7rem,4vw,2.9rem);line-height:1.22;letter-spacing:-.01em;max-width:22ch}
+  .lead-serif em{font-style:italic;color:var(--rust)}
+  .body-p{font-size:clamp(1.02rem,1.4vw,1.18rem);color:var(--ink-2);max-width:56ch;margin-top:1.4rem}
+  .rev{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}.rev.in{opacity:1;transform:none}
+
+  /* split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;max-width:1180px;margin:0 auto;padding:clamp(3rem,7vh,6rem) clamp(1.2rem,4vw,3.5rem)}
+  .split.rev-cols{direction:rtl}.split.rev-cols>*{direction:ltr}
+  @media(max-width:820px){.split{grid-template-columns:1fr}}
+  .shot{border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:var(--sand-2)}
+  .shot.wide{aspect-ratio:4/3}
+  .shot img{width:100%;height:100%;object-fit:cover;display:block}
+  .split h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(1.9rem,4vw,3rem);line-height:1.03;letter-spacing:-.025em}.split h2 em{font-style:normal;color:var(--pine)}
+  .split p{color:var(--ink-2);margin-top:1.2rem;max-width:46ch}
+
+  /* philosophy band */
+  .philo{background:var(--pine);color:var(--sand);padding:clamp(4rem,9vh,7rem) clamp(1.2rem,4vw,3.5rem)}
+  .philo-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+  @media(max-width:820px){.philo-in{grid-template-columns:1fr}}
+  .philo h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.03;letter-spacing:-.025em}.philo h2 em{font-style:normal;color:var(--gold)}
+  .pcol{border-top:1px solid rgba(243,235,221,.22);padding-top:1.1rem;margin-bottom:1.4rem}
+  .pcol h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.15rem;margin-bottom:.4rem;display:flex;gap:.6rem;align-items:baseline}.pcol h3 .no{font-family:'Space Mono',monospace;font-size:.8rem;color:var(--gold)}
+  .pcol p{color:rgba(243,235,221,.72);font-size:.96rem}
+
+  /* cta */
+  .cta{text-align:center;padding:clamp(4rem,10vh,8rem) clamp(1.2rem,4vw,3.5rem)}
+  .cta h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(2.2rem,6vw,4.4rem);line-height:1;letter-spacing:-.03em;max-width:16ch;margin:0 auto 1.4rem}
+  .cta h2 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--rust)}
+  .cta p{color:var(--ink-2);max-width:42ch;margin:0 auto 2.2rem}
+
+  footer{background:var(--ink);color:var(--sand);padding:clamp(3rem,7vh,5rem) clamp(1.2rem,4vw,3.5rem) 2rem}
+  .foot{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem;align-items:flex-start}
+  .foot .brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.2rem;display:flex;align-items:center;gap:.6rem}
+  .foot .brand .sos{width:34px;height:34px;border-radius:8px;background:var(--rust);display:grid;place-items:center}.foot .brand .sos img{width:100%;height:100%;object-fit:contain;padding:5px}
+  .foot p{color:rgba(243,235,221,.68);font-size:.92rem;max-width:34ch;margin-top:.8rem}
+  .foot .col h4{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+  .foot .col span,.foot .col a{display:block;color:rgba(243,235,221,.78);font-size:.92rem;margin-bottom:.5rem}
+  .foot-bottom{max-width:1180px;margin:2.5rem auto 0;padding-top:1.4rem;border-top:1px solid rgba(243,235,221,.14);font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.06em;color:rgba(243,235,221,.5);text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+</style>
+</head>
+<body>
+  <div class="announce">Handmade in Flagstaff, Arizona since 2008</div>
+  <header><nav class="nav">
+    <a href="index.html" class="logo"><span class="sos"><img src="images/sos-logo.png" alt="SOS"></span><span class="full">Simple Outdoor Solutions<small>Flagstaff, AZ · est. 2008</small></span></a>
+    <div class="menu"><a href="index.html#shop">Shop</a><a href="index.html#outsak">The Outsak</a><a href="story.html">Our Story</a><a href="index.html#contact">Contact</a></div>
+    <a href="index.html#shop" class="btn btn-ghost" style="padding:.5rem 1.1rem">Shop →</a>
+  </nav></header>
+
+  <section class="shero">
+    <div class="shero-img"></div><div class="shero-scrim"></div>
+    <div class="eyebrow">Our story · Flagstaff, Arizona</div>
+    <h1>Born in the <em>Grand Canyon</em>.</h1>
+  </section>
+
+  <section class="wrap">
+    <div class="kick rev">Where it began</div>
+    <p class="lead-serif rev">It started with too much weight — and a long walk out of the canyon to think about it.</p>
+    <p class="body-p rev">Decades ago, on the floor of the Grand Canyon, one truth got very heavy and very obvious: the more you carry, the less of the canyon you actually get to see. So the gear got lighter. Then it got smarter. Then other hikers started asking where they could get some. That's the whole origin — no boardroom, no brand launch. Just a better way to carry less.</p>
+  </section>
+
+  <div class="split">
+    <div class="shot rev"><img src="images/craft-sewing.jpg" alt="An Outsak label being sewn on"></div>
+    <div class="rev">
+      <div class="kick">Made by one pair of hands</div>
+      <h2>Not a factory. <em>A workbench.</em></h2>
+      <p>Every Outsak, every strap, every cooler is cut, sewn, and finished by hand in Flagstaff — a few at a time. Stainless mesh, webbing, a sewing machine, and a lot of attention. It was never about the person at the bench. It's about what that care lets you do out there.</p>
+    </div>
+  </div>
+
+  <div class="split rev-cols">
+    <div class="shot rev"><img src="images/outsak-stack.jpg" alt="A stack of finished Outsak Ultralight bags"></div>
+    <div class="rev">
+      <div class="kick">Small batches</div>
+      <h2>Made a handful <em>at a time</em>.</h2>
+      <p>We build in small runs so we can stand behind every stitch. Each Outsak leaves the bench with its label sewn on and its hook-and-loop closure checked by hand — the same way it's been done since 2008.</p>
+    </div>
+  </div>
+
+  <section class="philo">
+    <div class="philo-in">
+      <div class="rev"><div class="kick" style="color:var(--gold)">The rule</div><h2>Minimal means every ounce <em>earns its place</em>.</h2></div>
+      <div>
+        <div class="pcol rev"><h3><span class="no">01</span> Nothing extra</h3><p>If a component doesn't make the gear lighter, tougher, or more useful, it doesn't ship.</p></div>
+        <div class="pcol rev"><h3><span class="no">02</span> Built to last</h3><p>Stainless steel mesh, real webbing, honest stitching — made to outlast the trip, and the next one.</p></div>
+        <div class="pcol rev"><h3><span class="no">03</span> Field-tested</h3><p>We use what we make, down in the Grand Canyon and across the Colorado Plateau, all the time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="split">
+    <div class="shot wide rev"><img src="images/the-range.jpg" alt="The full range of Simple Outdoor Solutions gear"></div>
+    <div class="rev">
+      <div class="kick">The whole kit</div>
+      <h2>One bag became <em>a whole system</em>.</h2>
+      <p>What started as a single animal-proof food bag is now a full range — food protection, insulated coolers and cozies, bottle straps, sit pads — each new piece held to the same rule as the first. Seventeen years of small batches, still made by hand.</p>
+    </div>
+  </div>
+
+  <section class="cta">
+    <div class="rev"><div class="kick" style="justify-content:center">Still about the canyon</div>
+    <h2>Carry less. <em>Go deeper.</em></h2>
+    <p>Everything we make exists to give you more trail, more quiet, and more days out there.</p>
+    <a href="index.html#shop" class="btn btn-primary">Shop the gear →</a></div>
+  </section>
+
+  <footer>
+    <div class="foot">
+      <div><div class="brand"><span class="sos"><img src="images/sos-logo.png" alt="SOS"></span> Simple Outdoor Solutions</div>
+        <p>Handmade ultralight backpacking gear, sewn by hand in Flagstaff, Arizona. Born in the Grand Canyon, made by hand since 2008.</p></div>
+      <div class="col"><h4>Reach us</h4><span>11600 N Onika Ln<br>Flagstaff, AZ</span><span>(928) 637-4007</span><a href="mailto:info@simpleoutdoorstore.com">info@simpleoutdoorstore.com</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Simple Outdoor Solutions, LLC</span><span>✦ Handmade in Flagstaff, AZ · Made in USA</span></div>
+  </footer>
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.16});
+  document.querySelectorAll('.rev').forEach((el,i)=>{el.style.transitionDelay=((i%3)*70)+'ms';io.observe(el)});
+</script>
+</body>
+</html>
