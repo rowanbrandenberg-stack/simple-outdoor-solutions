@@ -192,6 +192,13 @@
   .stars{color:var(--gold);letter-spacing:.15em;margin-bottom:.8rem}
   .rcard p{font-size:.98rem}
   .rcard .who{font-family:'Space Mono',monospace;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-top:1rem}
+  .rcard{display:flex;flex-direction:column}
+  .rcard p{flex:1}
+  .rcard .srcbadge{align-self:flex-start;display:inline-block;font-family:'Space Mono',monospace;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sand);background:var(--pine);padding:.28rem .6rem;border-radius:5px;margin-bottom:.9rem;font-weight:700}
+  .rcard .srclink{display:inline-block;font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rust-deep);margin-top:.9rem;border-bottom:1px solid rgba(154,63,28,.35);padding-bottom:1px;align-self:flex-start}
+  .rcard .srclink:hover{border-bottom-color:var(--rust-deep)}
+  .factstrip{display:flex;justify-content:center;gap:clamp(1.4rem,4vw,3.4rem);flex-wrap:wrap;margin-top:2.6rem;padding-top:2rem;border-top:1px solid var(--line);font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:center}
+  .factstrip b{display:block;font-size:1.5rem;letter-spacing:-.02em;color:var(--rust-deep);margin-bottom:.3rem;font-weight:400}
 
   /* ---------- newsletter ---------- */
   .news{text-align:center;position:relative;overflow:hidden}
@@ -372,11 +379,31 @@
   <!-- REVIEWS -->
   <section class="reviews">
     <div class="wrap">
-      <div class="rev"><div class="kick">Why it holds up</div><h2 class="sec">Trusted for <em>17 years</em> and counting.</h2></div>
+      <div class="rev"><div class="kick">Independent reviews</div><h2 class="sec">Trusted for <em>17 years</em> and counting.</h2></div>
       <div class="rev-grid">
-        <div class="rcard rev"><div class="stars mono" style="font-family:'Space Mono',monospace;font-size:1.9rem;letter-spacing:-.02em">3 years</div><p>Every Outsak carries a three-year warranty. Nothing to register, no receipt hunt — tell us what failed and we'll make it right.</p><div class="who">— Warranty, all Outsak models</div></div>
-        <div class="rcard rev"><div class="stars mono" style="font-family:'Space Mono',monospace;font-size:1.9rem;letter-spacing:-.02em">2.5 oz</div><p>What a UL micro weighs. A hard-sided canister weighs in pounds. That difference is the whole reason this exists.</p><div class="who">— Outsak UL micro · 4.3 L</div></div>
-        <div class="rcard rev"><div class="stars mono" style="font-family:'Space Mono',monospace;font-size:1.9rem;letter-spacing:-.02em">100%</div><p>Cut, sewn, and checked at one bench in Flagstaff, Arizona. Handmade in the USA, in small batches, since 2008.</p><div class="who">— Made in Flagstaff, AZ</div></div>
+        <div class="rcard rev">
+          <span class="srcbadge">Backpacker</span>
+          <p>&ldquo;No critter slipped through this tight food security system.&rdquo;</p>
+          <div class="who">— Backpacker, Holiday Gift Guide 2011<br>after four months in Oregon &amp; Washington wilderness</div>
+          <a class="srclink" href="https://www.backpacker.com/survival/holiday-gift-guide-2011-grubpack-and-outsak-ul/" target="_blank" rel="noopener">Read it →</a>
+        </div>
+        <div class="rcard rev">
+          <div class="stars">★★★★</div>
+          <p>&ldquo;I can't stop saying good things about it.&rdquo; It &ldquo;will help you get through the night without wondering if your food will still be there.&rdquo;</p>
+          <div class="who">— Jacob Williams · Trailspace · bought his own</div>
+          <a class="srclink" href="https://www.trailspace.com/gear/simple-outdoor-solutions/original-outsak/" target="_blank" rel="noopener">Read it →</a>
+        </div>
+        <div class="rcard rev">
+          <span class="srcbadge">Backpacking Light</span>
+          <p>&ldquo;Security was never breached.&rdquo; Against small and medium critters that chewed at it and worked the closure over.</p>
+          <div class="who">— Gary Dunckel · Backpacking Light forum</div>
+          <a class="srclink" href="https://backpackinglight.com/forums/topic/28276/" target="_blank" rel="noopener">Read the thread →</a>
+        </div>
+      </div>
+      <div class="factstrip rev">
+        <span><b>3 years</b> Warranty on every Outsak</span>
+        <span><b>2.5 oz</b> What a UL micro weighs</span>
+        <span><b>100%</b> Handmade in the USA</span>
       </div>
     </div>
   </section>
@@ -407,7 +434,6 @@
       <div class="contact" id="contact">
         <h4>Visit / Reach us</h4>
         <span>11600 N Onika Ln<br>Flagstaff, AZ</span>
-        <span>(928) 637-4007</span>
         <a href="mailto:info@simpleoutdoorstore.com">info@simpleoutdoorstore.com</a>
       </div>
     </div>

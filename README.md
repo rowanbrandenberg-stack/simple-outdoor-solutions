@@ -92,8 +92,9 @@ These prices are still estimates carried over from the handoff and are marked wi
 
 Also outstanding:
 
-- **Phone number.** The site uses (928) 637-4007, from the handoff. The old site's
-  FAQ page lists **(928) 526-5774**. Confirm which is current.
+- **Phone number: removed.** (928) 637-4007 was Rowan's old home number and has been
+  taken off every page. Email is now the only contact channel, which matches the old
+  site's own advice that "the BEST way is by email." Add a business line later if wanted.
 - **Email.** The old site's contact page gives info@simpleoutdoorstore.com and says
   email is the best way to reach them; its homepage footer shows jen@ instead.
   We use info@ throughout.
@@ -102,12 +103,29 @@ Also outstanding:
   it has been replaced with the verified three-year warranty line. Put it back once
   David confirms the actual threshold.
 - **Shipping turnaround, rates, return window** — placeholders on `contact.html`.
-- **Reviews.** Trailspace has only two reviews of the Outsak UL (average 3.0): a
-  5-star field-test review from 2010 and a 0.5-star review from May 2026 about a
-  refund dispute. Not usable as marketing copy. The fabricated "verified buyer"
-  testimonials that were on the homepage have been **removed** and replaced with
-  verifiable facts (warranty, weight, made-in-USA). Collect real reviews before
-  adding a testimonial section back.
+- **Reviews: now real and sourced.** The fabricated "verified buyer" testimonials are
+  gone. The homepage now quotes three independent, linked sources:
+
+  | Quote | Source | Note |
+  |---|---|---|
+  | "No critter slipped through this tight food security system." | Backpacker, Holiday Gift Guide 2011 | Four months of testing in OR & WA |
+  | "I can't stop saying good things about it." | Jacob Williams, Trailspace, 4 stars, 2009 | Price Paid: $39.99 — a real customer |
+  | "Security was never breached." | Gary Dunckel, Backpacking Light forum | Small/medium critters |
+
+  **Verify the exact wording** against the three linked pages before launch — the quotes
+  were gathered via an automated read and should be eyeballed once by a human.
+
+  Note the Backpacker article lists the 2011 price of $36 and a weight of 3.7 oz, so a
+  visitor who clicks through sees older figures than the site's current $39–43.
+
+  Not used, but available if wanted: Chad Poindexter (Stick's Blog, 2010) wrote "a great
+  product from a great company" — he was a beta tester, so that connection would need
+  disclosing alongside the quote.
+
+  Also worth knowing: both Trailspace listings carry a low-star review about customer
+  service, not product quality (Michael, Aug 2015, refund/return dispute; and a 0.5-star
+  review from May 2026 about a $7 PayPal fee kept from a refund). Those are business
+  issues rather than website ones.
 - **Gallery photos** — `outsak.html` currently uses the studio and macro shots.
   Swap in `5.png` (open, holding trail food), `6.png` (filled, on a canyon rock),
   `7.png` (hung from a juniper), `8.png` (beside a bear canister) when available;
