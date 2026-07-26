@@ -144,12 +144,10 @@
   /* internal review mode: append ?review=1 to flag unconfirmed prices */
   body.review [data-est]{position:relative;outline:2px dashed var(--gold);outline-offset:3px;border-radius:4px}
   body.review [data-est]::after{content:'EST';position:absolute;top:-1.15rem;right:0;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.1em;background:var(--gold);color:var(--ink);padding:.05rem .3rem;border-radius:3px;font-weight:700}
-  .reviewnote{display:none}
-  body.review .reviewnote{display:block;background:var(--gold);color:var(--ink);text-align:center;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1rem}
+  .reviewnote{display:block;background:var(--gold);color:var(--ink);text-align:center;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1rem}
 </style>
 </head>
 <body>
-  <div class="reviewnote">Review mode — dashed items are estimated prices awaiting confirmation from David</div>
   <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>3-year warranty on every Outsak</b></div>
 
   <header>
@@ -445,7 +443,13 @@
   }));
 
   /* internal review mode */
-  if(new URLSearchParams(location.search).get('review')==='1') document.body.classList.add('review');
+  if(new URLSearchParams(location.search).get('review')==='1'){
+    document.body.classList.add('review');
+    const n=document.createElement('div');
+    n.className='reviewnote';
+    n.textContent='Review mode — dashed items still need confirming with David';
+    document.body.prepend(n);
+  }
 </script>
 </body>
 </html>
