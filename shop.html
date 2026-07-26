@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — Handmade Ultralight Gear · Simple Outdoor Solutions</title>
+<meta name="description" content="The full Simple Outdoor Solutions catalog — animal-proof Outsak food bags, insulated coolers and cozies, straps and harnesses, sewn by hand in Flagstaff, Arizona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300..800&family=Instrument+Sans:ital,wght@0,400..600;1,400&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#f3ebdd; --sand-2:#e9dcc6; --sand-3:#ded0b6;
+    --ink:#211b13; --ink-2:#2f2719; --ink-soft:#5c5240;
+    --rust:#bf5327; --rust-deep:#9a3f1c;
+    --pine:#2f5d4e; --pine-deep:#1e3f34;
+    --gold:#e2a44b; --stone:#8a7d68;
+    --line:rgba(33,27,19,.14);
+    --paper-grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    --topo:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%23211b13' stroke-width='1'%3E%3Cpath d='M0 120 Q100 80 200 120 T400 120'/%3E%3Cpath d='M0 150 Q100 110 200 150 T400 150'/%3E%3Cpath d='M0 180 Q100 140 200 180 T400 180'/%3E%3Cpath d='M0 210 Q100 170 200 210 T400 210'/%3E%3Cpath d='M0 240 Q100 200 200 240 T400 240'/%3E%3Cpath d='M0 270 Q100 230 200 270 T400 270'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--sand);color:var(--ink);font-family:'Instrument Sans',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--rust);color:var(--sand)}
+  a{color:inherit;text-decoration:none}
+  .mono{font-family:'Space Mono',monospace}
+  img{max-width:100%;display:block}
+  body::after{content:'';position:fixed;inset:0;z-index:200;pointer-events:none;background-image:var(--paper-grain);opacity:.04;mix-blend-mode:multiply}
+  .topo{position:absolute;inset:0;z-index:0;opacity:.10;background-image:var(--topo);pointer-events:none}
+
+  /* ---------- announcement + header ---------- */
+  .announce{background:var(--pine-deep);color:var(--sand);text-align:center;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1rem}
+  .announce b{color:var(--gold);font-weight:700}
+  header{position:sticky;top:0;z-index:100;background:rgba(243,235,221,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem clamp(1.2rem,4vw,3.5rem);gap:2rem}
+  .logo{display:flex;align-items:center;gap:.7rem;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-.01em}
+  .logo .sos{display:grid;place-items:center;width:40px;height:40px;border-radius:9px;background:var(--rust);color:var(--sand);font-size:.95rem;letter-spacing:.06em;box-shadow:0 4px 14px -4px rgba(191,83,39,.6)}
+  .logo .sos img{width:100%;height:100%;object-fit:contain;padding:5px}
+  .logo .full{line-height:1.05;font-size:.95rem}
+  .logo .full small{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:.62rem;letter-spacing:.14em;color:var(--ink-soft);text-transform:uppercase}
+  .menu{display:flex;gap:2rem;font-size:.9rem;font-weight:500}
+  .menu a{position:relative;padding:.3rem 0}
+  .menu a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--rust);transition:width .3s}
+  .menu a:hover::after,.menu a[aria-current]::after{width:100%}
+  .nav-right{display:flex;align-items:center;gap:1.3rem}
+  .cart{display:flex;align-items:center;gap:.5rem;font-size:.9rem;font-weight:500;border:1px solid var(--ink);border-radius:100px;padding:.5rem 1rem;transition:.25s;background:transparent;cursor:pointer;font-family:'Instrument Sans',sans-serif}
+  .cart:hover{background:var(--ink);color:var(--sand)}
+  .cart .badge{background:var(--rust);color:var(--sand);border-radius:50%;width:18px;height:18px;display:grid;place-items:center;font-size:.7rem;font-weight:700}
+  @media(max-width:860px){.menu{display:none}}
+
+  .btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:600;font-size:.95rem;padding:.95rem 1.8rem;border-radius:100px;transition:transform .2s,box-shadow .2s,background .2s;will-change:transform;cursor:pointer;font-family:'Instrument Sans',sans-serif}
+  .btn-primary{background:var(--rust);color:var(--sand);box-shadow:0 12px 34px -10px rgba(154,63,28,.75);border:none}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 44px -10px rgba(154,63,28,.85)}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink);background:transparent}
+  .btn-ghost:hover{background:var(--ink);color:var(--sand)}
+
+  .kick{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rust-deep);display:flex;align-items:center;gap:.7rem;margin-bottom:1.4rem}
+  .kick::before{content:'';width:22px;height:2px;background:var(--rust)}
+  .rev{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+  .rev.in{opacity:1;transform:none}
+
+  /* ---------- catalog masthead ---------- */
+  .masthead{position:relative;overflow:hidden;isolation:isolate;background:var(--sand-2);border-bottom:1px solid var(--line)}
+  .masthead .inner{max-width:1180px;margin:0 auto;padding:clamp(3rem,8vh,5.5rem) clamp(1.2rem,4vw,3.5rem) clamp(2.4rem,5vh,3.4rem);position:relative;z-index:1}
+  .masthead h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(2.6rem,7.5vw,5.6rem);line-height:.94;letter-spacing:-.035em;max-width:16ch}
+  .masthead h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--rust)}
+  .masthead .lede{margin-top:1.4rem;max-width:52ch;font-size:clamp(1.02rem,1.4vw,1.16rem);color:var(--ink-2)}
+  .facts{display:flex;gap:2.4rem;flex-wrap:wrap;margin-top:2.2rem;font-family:'Space Mono',monospace}
+  .facts .f .n{font-size:1.5rem;color:var(--rust-deep);line-height:1}
+  .facts .f .l{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:.45rem}
+
+  /* ---------- sticky filter bar ---------- */
+  .filterbar{position:sticky;top:73px;z-index:90;background:rgba(243,235,221,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .filterbar .fb{max-width:1180px;margin:0 auto;padding:.85rem clamp(1.2rem,4vw,3.5rem);display:flex;align-items:center;justify-content:space-between;gap:1.4rem}
+  .cats{display:flex;gap:.55rem;flex-wrap:wrap}
+  .cats button{font-family:'Space Mono',monospace;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;padding:.48rem 1.05rem;border-radius:100px;border:1px solid var(--line);background:transparent;color:var(--ink-soft);cursor:pointer;transition:.22s;white-space:nowrap}
+  .cats button:hover{border-color:var(--ink);color:var(--ink)}
+  .cats button.active{background:var(--ink);color:var(--sand);border-color:var(--ink)}
+  .count{font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+  @media(max-width:720px){.filterbar .fb{flex-direction:column;align-items:flex-start;gap:.7rem}.count{order:-1}}
+
+  /* ---------- grid ---------- */
+  .wrap{max-width:1180px;margin:0 auto;padding:clamp(2.6rem,6vh,4rem) clamp(1.2rem,4vw,3.5rem) clamp(4rem,9vh,6.5rem)}
+  .products{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.8rem)}
+  @media(max-width:900px){.products{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.products{grid-template-columns:1fr}}
+  .card{background:var(--sand-2);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .3s,box-shadow .3s,opacity .3s;position:relative;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 40px -22px rgba(33,27,19,.45)}
+  .card.hide{display:none}
+  .card .ph{aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--sand-3);display:block}
+  .card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+  .card:hover .ph img{transform:scale(1.045)}
+  .card .ph::after{content:'';position:absolute;inset:0;background-image:var(--paper-grain);opacity:.05;mix-blend-mode:multiply}
+  .card .flag{position:absolute;top:.8rem;left:.8rem;z-index:3;font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:var(--ink);padding:.26rem .55rem;border-radius:5px;font-weight:700}
+  .card .mat{position:absolute;bottom:.8rem;right:.8rem;z-index:3;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,235,221,.95);background:rgba(33,27,19,.5);border:1px solid rgba(243,235,221,.22);padding:.24rem .55rem;border-radius:100px;backdrop-filter:blur(3px)}
+  .card .info{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;flex:1}
+  .card .name{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.1rem;letter-spacing:-.01em;display:flex;justify-content:space-between;gap:.6rem;align-items:baseline}
+  .card .price{font-family:'Space Mono',monospace;font-size:.9rem;color:var(--rust-deep);white-space:nowrap}
+  .card .desc{font-size:.86rem;color:var(--ink-soft);margin-top:.4rem;flex:1}
+  .add{margin-top:1.1rem;width:100%;border:1px solid var(--ink);background:transparent;color:var(--ink);font-family:'Instrument Sans',sans-serif;font-weight:600;font-size:.85rem;padding:.65rem;border-radius:8px;cursor:pointer;transition:.2s;letter-spacing:.02em}
+  .add:hover{background:var(--rust);border-color:var(--rust);color:var(--sand)}
+  .detail{margin-top:.6rem;font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rust-deep);text-align:center;display:block}
+  .detail:hover{text-decoration:underline}
+  .empty{display:none;text-align:center;padding:4rem 1rem;font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+
+  /* ---------- outsak cross-sell band ---------- */
+  .xband{background:var(--ink);color:var(--sand);position:relative;overflow:hidden;isolation:isolate}
+  .xband .topo{opacity:.06;filter:invert(1)}
+  .xb{max-width:1180px;margin:0 auto;padding:clamp(3.5rem,8vh,5.5rem) clamp(1.2rem,4vw,3.5rem);display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;position:relative;z-index:1}
+  @media(max-width:860px){.xb{grid-template-columns:1fr}}
+  .xb .shot{aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid rgba(243,235,221,.15);background:#2c2418}
+  .xb .shot img{width:100%;height:100%;object-fit:cover}
+  .xb h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.02;letter-spacing:-.025em}
+  .xb h2 em{font-style:normal;color:var(--gold)}
+  .xb p{color:rgba(243,235,221,.75);max-width:46ch;margin-top:1.2rem}
+  .xb .kick{color:var(--gold)}
+  .xb .kick::before{background:var(--gold)}
+
+  /* ---------- assurance strip ---------- */
+  .assure{background:var(--sand-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .as{max-width:1180px;margin:0 auto;padding:clamp(2.6rem,6vh,4rem) clamp(1.2rem,4vw,3.5rem);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.6rem,3vw,3rem)}
+  @media(max-width:820px){.as{grid-template-columns:1fr}}
+  .acol{border-top:2px solid var(--rust);padding-top:1rem}
+  .acol h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.1rem;margin-bottom:.35rem}
+  .acol p{font-size:.92rem;color:var(--ink-soft);max-width:38ch}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:var(--sand);padding:clamp(3.5rem,7vh,5.5rem) clamp(1.2rem,4vw,3.5rem) 2rem}
+  .foot{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.2rem}
+  @media(max-width:860px){.foot{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.foot{grid-template-columns:1fr}}
+  .foot .brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.3rem;display:flex;align-items:center;gap:.6rem;margin-bottom:1rem}
+  .foot .brand .sos{width:34px;height:34px;border-radius:8px;background:var(--rust);display:grid;place-items:center;font-size:.8rem;letter-spacing:.05em}
+  .foot .brand .sos img{width:100%;height:100%;object-fit:contain;padding:5px}
+  .foot p{color:rgba(243,235,221,.68);font-size:.92rem;max-width:32ch}
+  .foot h4{font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+  .foot a{display:block;color:rgba(243,235,221,.78);font-size:.92rem;margin-bottom:.55rem;transition:color .25s}
+  .foot a:hover{color:var(--sand)}
+  .foot .contact span{display:block;color:rgba(243,235,221,.78);font-size:.92rem;margin-bottom:.55rem}
+  .foot-bottom{max-width:1180px;margin:3rem auto 0;padding-top:1.6rem;border-top:1px solid rgba(243,235,221,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.06em;color:rgba(243,235,221,.5);text-transform:uppercase}
+  .foot-bottom .made{color:var(--gold)}
+
+  /* internal review mode: append ?review=1 to flag unconfirmed prices */
+  body.review [data-est]{position:relative;outline:2px dashed var(--gold);outline-offset:3px;border-radius:4px}
+  body.review [data-est]::after{content:'EST';position:absolute;top:-1.15rem;right:0;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.1em;background:var(--gold);color:var(--ink);padding:.05rem .3rem;border-radius:3px;font-weight:700}
+  .reviewnote{display:none}
+  body.review .reviewnote{display:block;background:var(--gold);color:var(--ink);text-align:center;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1rem}
+</style>
+</head>
+<body>
+  <div class="reviewnote">Review mode — dashed items are estimated prices awaiting confirmation from David</div>
+  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>Free U.S. shipping over $75</b></div>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <span class="sos"><img src="images/sos-logo.png" alt="Simple Outdoor Solutions"></span>
+        <span class="full">Simple Outdoor Solutions<small>Flagstaff, AZ · est. 2008</small></span>
+      </a>
+      <div class="menu">
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="outsak.html">The Outsak</a>
+        <a href="story.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="cart" type="button">Cart <span class="badge">0</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MASTHEAD -->
+  <section class="masthead">
+    <div class="topo"></div>
+    <div class="inner">
+      <div class="kick">The full catalog</div>
+      <h1>Everything we make, <em>made by hand</em>.</h1>
+      <p class="lede">Fourteen pieces, cut and sewn a few at a time in Flagstaff, Arizona. No warehouse, no overseas line — just stainless mesh, webbing, Dyneema, and a workbench in the high pines.</p>
+      <div class="facts">
+        <div class="f"><div class="n">14</div><div class="l">Pieces in the range</div></div>
+        <div class="f"><div class="n">2008</div><div class="l">Sewing since</div></div>
+        <div class="f"><div class="n">USA</div><div class="l">Made in Flagstaff, AZ</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <div class="filterbar">
+    <div class="fb">
+      <div class="cats" id="cats">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="food">Food Protection</button>
+        <button data-filter="coolers">Coolers &amp; Cozies</button>
+        <button data-filter="straps">Straps &amp; Harnesses</button>
+        <button data-filter="accessories">Accessories</button>
+        <button data-filter="kits">Kits</button>
+      </div>
+      <div class="count" id="count">Showing 14 of 14</div>
+    </div>
+  </div>
+
+  <!-- CATALOG -->
+  <section class="wrap">
+    <div class="products" id="grid">
+
+      <!-- FOOD PROTECTION -->
+      <article class="card rev" data-cat="food">
+        <a class="ph" href="outsak.html"><span class="flag">The original</span><img src="images/outsak-ultralight.jpg" alt="Outsak Ultralight stainless wire-mesh food bag" loading="lazy"><span class="mat">Stainless mesh</span></a>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name"><a href="outsak.html">Outsak Ultralight</a> <span class="price" data-est>from $44</span></div>
+          <p class="desc">The animal-proof wire-mesh bag that started the whole thing. Critters chew, then give up. Hook-and-loop top band, packs flat.</p>
+          <button class="add">Add to cart</button>
+          <a class="detail" href="outsak.html">See specs &amp; sizes →</a>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="food">
+        <a class="ph" href="outsak.html"><span class="flag">Best seller</span><img src="images/outsak-spectrum.jpg" alt="Outsak Spectrum wire-mesh food cache" loading="lazy"><span class="mat">Stainless mesh</span></a>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name">Outsak Spectrum <span class="price" data-est>from $59</span></div>
+          <p class="desc">A bigger mesh cache for groups, base camps, and long resupply-free stretches. Same closure, same chew-proof mesh.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="food kits">
+        <div class="ph"><span class="flag">Kit · save</span><img src="images/outsak-ul-kit.jpg" alt="Outsak Ultralight kit with liner and storage sleeve" loading="lazy"><span class="mat">Complete kit</span></div>
+        <div class="info">
+          <div class="name">Outsak UL Kit <span class="price">$64–71</span></div>
+          <p class="desc">Everything together: the Outsak Ultralight, a slap-bag liner to keep crumbs off the mesh, and a storage sleeve for the off-season.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="food">
+        <div class="ph"><img src="images/slap-bag.jpg" alt="Slap Bag ripstop liner" loading="lazy"><span class="mat">Ripstop liner</span></div>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name">Slap Bag <span class="price" data-est>$12–16</span></div>
+          <p class="desc">A light ripstop liner that keeps crumbs, wrappers, and powdered dinners on the inside of the mesh where they belong.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="food">
+        <div class="ph"><img src="images/overkill-slap-bag.jpg" alt="Overkill Slap Bag reinforced liner" loading="lazy"><span class="mat">Reinforced</span></div>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name">Overkill Slap Bag <span class="price" data-est>$12–16</span></div>
+          <p class="desc">The heavier-duty liner, for loads with sharp corners and long trips that ask more of a bag than they should.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <!-- COOLERS & COZIES -->
+      <article class="card rev" data-cat="coolers">
+        <div class="ph"><span class="flag">Fits Bearikade</span><img src="images/escape-pod-bearikade.jpg" alt="Escape Pod insulated sleeve for a Bearikade canister" loading="lazy"><span class="mat">Reflectix</span></div>
+        <div class="info">
+          <div class="name">Escape Pod Bearikade Cooler <span class="price">$49–77</span></div>
+          <p class="desc">An insulated jacket that turns a Bearikade canister into a cooler. Cold drinks on day three, or a hot meal that's still hot.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="coolers">
+        <div class="ph"><img src="images/escape-pod.jpg" alt="Escape Pod soft-sided cooler" loading="lazy"><span class="mat">Reflectix</span></div>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name">Escape Pod Cooler <span class="price" data-est>from $39</span></div>
+          <p class="desc">Soft-sided and double-walled, so it packs down to nothing and works both directions — hot or cold, all day.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="coolers">
+        <div class="ph"><img src="images/escape-pouch.jpg" alt="Escape Pouch freeze-dried meal cozy" loading="lazy"><span class="mat">Reflectix</span></div>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name">Escape Pouch <span class="price" data-est>from $18</span></div>
+          <p class="desc">A meal cozy sized for a freeze-dried pouch. Pour, seal, walk five minutes, eat something that's actually rehydrated.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <!-- STRAPS & HARNESSES -->
+      <article class="card rev" data-cat="straps">
+        <div class="ph"><img src="images/bearikade-harness.jpg" alt="Bearikade Harness webbing straps" loading="lazy"><span class="mat">Webbing</span></div>
+        <div class="info">
+          <div class="name">Bearikade Harness <span class="price">from $37.50</span></div>
+          <p class="desc">Lashes a Bearikade canister to any pack so it rides where you want it. Add straps for $48.50–54.50.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="straps">
+        <div class="ph"><img src="images/canyon-strap.jpg" alt="Canyon Strap reflective bottle harness" loading="lazy"><span class="mat">Reflective</span></div>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name">Canyon Strap <span class="price" data-est>from $22</span></div>
+          <p class="desc">A reflective bottle harness that fits a Nalgene and keeps water where you can reach it without stopping.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="straps">
+        <div class="ph"><img src="images/flagstrap.jpg" alt="FlagStrap crossbody carry strap" loading="lazy"><span class="mat">Webbing</span></div>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name">FlagStrap <span class="price" data-est>from $28</span></div>
+          <p class="desc">Hands-free crossbody carry for the things you keep reaching for. Two sizes, honest webbing, simple hardware.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <!-- ACCESSORIES -->
+      <article class="card rev" data-cat="accessories">
+        <div class="ph"><span class="flag">Lifetime warranty</span><img src="images/adventure-seat.jpg" alt="Adventure Seat insulated sit pad" loading="lazy"><span class="mat">Insulated</span></div>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name">Adventure Seat <span class="price" data-est>from $32</span></div>
+          <p class="desc">Insulated, reflective, and close to indestructible. Cold rock, wet log, gravel bar — it doesn't care. Lifetime warranty.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="accessories">
+        <div class="ph"><img src="images/trail-bag.jpg" alt="Dyneema Trail Bag stuff sack" loading="lazy"><span class="mat">Dyneema</span></div>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name">Trail Bag <span class="price" data-est>from $26</span></div>
+          <p class="desc">A Dyneema stuff sack that weighs almost nothing and refuses to tear. For the kit you want sorted, not rattling.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="accessories">
+        <div class="ph"><img src="images/storage-sleeve.jpg" alt="Outsak storage sleeve" loading="lazy"><span class="mat">Packs flat</span></div>
+        <div class="info">
+          <!-- PRICE ESTIMATE — confirm with David -->
+          <div class="name">Storage Sleeve <span class="price" data-est>from $10</span></div>
+          <p class="desc">Keeps your Outsak folded flat and out of the way between trips, so the mesh stays true for the next decade.</p>
+          <button class="add">Add to cart</button>
+        </div>
+      </article>
+
+    </div>
+    <div class="empty" id="empty">Nothing in that category yet — try “All”.</div>
+  </section>
+
+  <!-- OUTSAK CROSS-SELL -->
+  <section class="xband" id="start-here">
+    <div class="topo"></div>
+    <div class="xb">
+      <div class="shot rev"><img src="images/outsak-macro.jpg" alt="Close-up of Outsak stainless steel wire mesh and hook-and-loop closure" loading="lazy"></div>
+      <div class="rev">
+        <div class="kick">Not sure where to start?</div>
+        <h2>Start with the <em>Outsak</em>.</h2>
+        <p>It's the piece that put us on the map: interlocking stainless-steel wire mesh that rodents can't chew through, closed with a black hook-and-loop top band, at a fraction of a hard canister's weight. Full specs, sizes, and every angle of it live on its own page.</p>
+        <a href="outsak.html" class="btn btn-primary" style="background:var(--gold);color:var(--ink);margin-top:1.8rem">See the Outsak in detail →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSURANCES -->
+  <section class="assure">
+    <div class="as">
+      <div class="acol rev"><h3>Small batches, by hand</h3><p>Every piece is cut, sewn, and checked at one bench in Flagstaff. If the stitching isn't right, it doesn't ship.</p></div>
+      <div class="acol rev"><h3>Built to outlast the trip</h3><p>Stainless mesh, real webbing, Reflectix, Dyneema. Materials chosen because they last, not because they're cheap.</p></div>
+      <div class="acol rev"><h3>Questions? Call us</h3><p>Sizing, fit, or which Outsak suits your trip — <a href="tel:+19286374007" style="color:var(--rust-deep);text-decoration:underline">(928) 637-4007</a> or <a href="contact.html" style="color:var(--rust-deep);text-decoration:underline">send a note</a>.</p></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot">
+      <div>
+        <div class="brand"><span class="sos"><img src="images/sos-logo.png" alt="Simple Outdoor Solutions"></span> Simple Outdoor Solutions</div>
+        <p>Handmade ultralight backpacking gear, sewn by hand in the high pines of Flagstaff, Arizona. Born in the Grand Canyon, made by hand since 2008.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="outsak.html">The Outsak</a><a href="shop.html#coolers">Coolers &amp; Cozies</a><a href="shop.html#straps">Straps &amp; Harnesses</a><a href="shop.html#accessories">Accessories</a><a href="shop.html#kits">Kits &amp; Bundles</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="story.html">Our Story</a><a href="contact.html#warranty">Warranty</a><a href="contact.html#shipping">Shipping &amp; Returns</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="contact">
+        <h4>Visit / Reach us</h4>
+        <span>11600 N Onika Ln<br>Flagstaff, AZ</span>
+        <span>(928) 637-4007</span>
+        <a href="mailto:info@simpleoutdoorstore.com">info@simpleoutdoorstore.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Simple Outdoor Solutions, LLC</span>
+      <span class="made">✦ Handmade in Flagstaff, AZ · Made in USA</span>
+    </div>
+  </footer>
+
+<script>
+  /* scroll reveals */
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rev').forEach((el,i)=>{el.style.transitionDelay=((i%3)*70)+'ms';io.observe(el)});
+
+  /* category filter */
+  const cards=[...document.querySelectorAll('#grid .card')];
+  const btns=[...document.querySelectorAll('#cats button')];
+  const countEl=document.getElementById('count');
+  const emptyEl=document.getElementById('empty');
+  function applyFilter(f,scroll){
+    let shown=0;
+    cards.forEach(c=>{
+      const match = f==='all' || c.dataset.cat.split(' ').includes(f);
+      c.classList.toggle('hide',!match);
+      if(match){shown++;c.classList.add('in')}
+    });
+    countEl.textContent='Showing '+shown+' of '+cards.length;
+    emptyEl.style.display = shown ? 'none' : 'block';
+    btns.forEach(b=>b.classList.toggle('active',b.dataset.filter===f));
+    if(scroll){document.querySelector('.filterbar').scrollIntoView({behavior:'smooth',block:'start'})}
+  }
+  btns.forEach(b=>b.addEventListener('click',()=>{
+    applyFilter(b.dataset.filter,false);
+    history.replaceState(null,'',b.dataset.filter==='all'?location.pathname:'#'+b.dataset.filter);
+  }));
+
+  /* deep links: shop.html#coolers etc. */
+  const valid=btns.map(b=>b.dataset.filter);
+  function fromHash(scroll){
+    const h=location.hash.replace('#','');
+    if(valid.includes(h)) applyFilter(h,scroll);
+  }
+  fromHash(false);
+  addEventListener('hashchange',()=>fromHash(true));
+
+  /* demo cart counter */
+  let n=0;const badge=document.querySelector('.cart .badge');
+  document.querySelectorAll('.add').forEach(btn=>btn.addEventListener('click',()=>{
+    n++;badge.textContent=n;
+    const t=btn.textContent;btn.textContent='Added ✓';
+    btn.style.background='var(--pine)';btn.style.color='var(--sand)';btn.style.borderColor='var(--pine)';
+    setTimeout(()=>{btn.textContent=t;btn.style.background='';btn.style.color='';btn.style.borderColor=''},1100);
+  }));
+
+  /* internal review mode */
+  if(new URLSearchParams(location.search).get('review')==='1') document.body.classList.add('review');
+</script>
+</body>
+</html>

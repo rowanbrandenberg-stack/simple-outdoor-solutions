@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Outsak — Animal-Proof Wire-Mesh Food Bag · Simple Outdoor Solutions</title>
+<meta name="description" content="The Outsak is a stainless-steel wire-mesh food bag that rodents can't chew through — a fraction of the weight of a hard canister, closed with a black hook-and-loop top band. Handmade in Flagstaff, Arizona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300..800&family=Instrument+Sans:ital,wght@0,400..600;1,400&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#f3ebdd; --sand-2:#e9dcc6; --sand-3:#ded0b6;
+    --ink:#211b13; --ink-2:#2f2719; --ink-soft:#5c5240;
+    --rust:#bf5327; --rust-deep:#9a3f1c;
+    --pine:#2f5d4e; --pine-deep:#1e3f34;
+    --gold:#e2a44b; --stone:#8a7d68;
+    --line:rgba(33,27,19,.14);
+    --paper-grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    --topo:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%23211b13' stroke-width='1'%3E%3Cpath d='M0 120 Q100 80 200 120 T400 120'/%3E%3Cpath d='M0 150 Q100 110 200 150 T400 150'/%3E%3Cpath d='M0 180 Q100 140 200 180 T400 180'/%3E%3Cpath d='M0 210 Q100 170 200 210 T400 210'/%3E%3Cpath d='M0 240 Q100 200 200 240 T400 240'/%3E%3Cpath d='M0 270 Q100 230 200 270 T400 270'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--sand);color:var(--ink);font-family:'Instrument Sans',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--rust);color:var(--sand)}
+  a{color:inherit;text-decoration:none}
+  .mono{font-family:'Space Mono',monospace}
+  img{max-width:100%;display:block}
+  body::after{content:'';position:fixed;inset:0;z-index:200;pointer-events:none;background-image:var(--paper-grain);opacity:.04;mix-blend-mode:multiply}
+  .topo{position:absolute;inset:0;z-index:0;opacity:.10;background-image:var(--topo);pointer-events:none}
+
+  /* header */
+  .announce{background:var(--pine-deep);color:var(--sand);text-align:center;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1rem}
+  .announce b{color:var(--gold);font-weight:700}
+  header{position:sticky;top:0;z-index:100;background:rgba(243,235,221,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem clamp(1.2rem,4vw,3.5rem);gap:2rem}
+  .logo{display:flex;align-items:center;gap:.7rem;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-.01em}
+  .logo .sos{display:grid;place-items:center;width:40px;height:40px;border-radius:9px;background:var(--rust);color:var(--sand);box-shadow:0 4px 14px -4px rgba(191,83,39,.6)}
+  .logo .sos img{width:100%;height:100%;object-fit:contain;padding:5px}
+  .logo .full{line-height:1.05;font-size:.95rem}
+  .logo .full small{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:.62rem;letter-spacing:.14em;color:var(--ink-soft);text-transform:uppercase}
+  .menu{display:flex;gap:2rem;font-size:.9rem;font-weight:500}
+  .menu a{position:relative;padding:.3rem 0}
+  .menu a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--rust);transition:width .3s}
+  .menu a:hover::after,.menu a[aria-current]::after{width:100%}
+  .cart{display:flex;align-items:center;gap:.5rem;font-size:.9rem;font-weight:500;border:1px solid var(--ink);border-radius:100px;padding:.5rem 1rem;transition:.25s;background:transparent;cursor:pointer;font-family:'Instrument Sans',sans-serif}
+  .cart:hover{background:var(--ink);color:var(--sand)}
+  .cart .badge{background:var(--rust);color:var(--sand);border-radius:50%;width:18px;height:18px;display:grid;place-items:center;font-size:.7rem;font-weight:700}
+  @media(max-width:860px){.menu{display:none}}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font-weight:600;font-size:.95rem;padding:.95rem 1.8rem;border-radius:100px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;font-family:'Instrument Sans',sans-serif;border:none}
+  .btn-primary{background:var(--rust);color:var(--sand);box-shadow:0 12px 34px -10px rgba(154,63,28,.75)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 44px -10px rgba(154,63,28,.85)}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink);background:transparent}
+  .btn-ghost:hover{background:var(--ink);color:var(--sand)}
+  .kick{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rust-deep);display:flex;align-items:center;gap:.7rem;margin-bottom:1.3rem}
+  .kick::before{content:'';width:22px;height:2px;background:var(--rust)}
+  .rev{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+  .rev.in{opacity:1;transform:none}
+
+  /* breadcrumb */
+  .crumb{max-width:1240px;margin:0 auto;padding:1.4rem clamp(1.2rem,4vw,3.5rem) 0;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+  .crumb a:hover{color:var(--rust-deep)}
+  .crumb span{color:var(--stone);margin:0 .5rem}
+
+  /* ---------- product hero: gallery + buy box ---------- */
+  .pdp{max-width:1240px;margin:0 auto;padding:clamp(1.6rem,4vh,2.6rem) clamp(1.2rem,4vw,3.5rem) clamp(3rem,7vh,5rem);display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(2rem,4.5vw,4rem);align-items:start}
+  @media(max-width:940px){.pdp{grid-template-columns:1fr}}
+
+  .gallery{position:sticky;top:96px}
+  @media(max-width:940px){.gallery{position:static}}
+  .frame{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--sand-2);aspect-ratio:4/3}
+  .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease}
+  .frame img.on{opacity:1}
+  .frame::after{content:'';position:absolute;inset:0;background-image:var(--paper-grain);opacity:.05;mix-blend-mode:multiply;pointer-events:none}
+  .frame .cap{position:absolute;bottom:.9rem;left:.9rem;z-index:3;font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:rgba(243,235,221,.82);padding:.34rem .7rem;border-radius:100px;backdrop-filter:blur(3px)}
+  .thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin-top:.7rem}
+  .thumbs button{position:relative;aspect-ratio:1/1;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--sand-2);cursor:pointer;padding:0;transition:.22s}
+  .thumbs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .thumbs button:hover{border-color:var(--ink-soft)}
+  .thumbs button.active{border-color:var(--rust);box-shadow:0 0 0 2px rgba(191,83,39,.28)}
+
+  .buy .eyebrow{font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rust-deep);display:flex;align-items:center;gap:.6rem}
+  .buy .eyebrow::before{content:'';width:20px;height:2px;background:var(--rust)}
+  .buy h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(2.3rem,5.2vw,3.9rem);line-height:.96;letter-spacing:-.035em;margin-top:1rem}
+  .buy h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--rust)}
+  .buy .sub{margin-top:1.1rem;font-size:clamp(1rem,1.3vw,1.12rem);color:var(--ink-2);max-width:46ch}
+  .priceline{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap;margin-top:1.6rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+  .priceline .p{font-family:'Space Mono',monospace;font-size:1.7rem;color:var(--rust-deep)}
+  .priceline .note{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+
+  .opt{margin-top:1.6rem}
+  .opt .lab{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.65rem;display:flex;justify-content:space-between;gap:1rem}
+  .opt .lab b{color:var(--ink);font-weight:400}
+  .swatches{display:flex;gap:.6rem;flex-wrap:wrap}
+  .swatches button{font-family:'Space Mono',monospace;font-size:.76rem;letter-spacing:.04em;text-transform:uppercase;padding:.62rem 1.15rem;border-radius:9px;border:1px solid var(--line);background:transparent;color:var(--ink-soft);cursor:pointer;transition:.2s;text-align:left;line-height:1.3}
+  .swatches button small{display:block;font-size:.62rem;letter-spacing:.08em;color:var(--stone);text-transform:uppercase}
+  .swatches button:hover{border-color:var(--ink)}
+  .swatches button.active{background:var(--ink);color:var(--sand);border-color:var(--ink)}
+  .swatches button.active small{color:rgba(243,235,221,.7)}
+
+  .buyrow{display:flex;gap:.8rem;margin-top:1.8rem;flex-wrap:wrap}
+  .buyrow .btn-primary{flex:1;min-width:220px}
+  .qty{display:flex;align-items:center;border:1px solid var(--ink);border-radius:100px;overflow:hidden}
+  .qty button{width:42px;height:100%;min-height:47px;background:transparent;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:1rem;color:var(--ink);transition:.2s}
+  .qty button:hover{background:var(--ink);color:var(--sand)}
+  .qty span{width:34px;text-align:center;font-family:'Space Mono',monospace;font-size:.95rem}
+  .reassure{margin-top:1.4rem;display:grid;gap:.5rem}
+  .reassure li{list-style:none;font-size:.9rem;color:var(--ink-soft);display:flex;gap:.6rem;align-items:flex-start}
+  .reassure li::before{content:'✦';color:var(--rust);flex:none}
+
+  /* closure callout */
+  .closure{margin-top:1.8rem;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;background:var(--sand-2);padding:1.1rem 1.2rem}
+  .closure h3{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rust-deep);margin-bottom:.5rem}
+  .closure p{font-size:.9rem;color:var(--ink-2)}
+  .closure b{font-weight:600}
+
+  /* ---------- spec table ---------- */
+  .specs{background:var(--ink);color:var(--sand);position:relative;overflow:hidden;isolation:isolate}
+  .specs .topo{opacity:.06;filter:invert(1)}
+  .specs .in{max-width:1180px;margin:0 auto;padding:clamp(3.5rem,8vh,5.5rem) clamp(1.2rem,4vw,3.5rem);position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+  @media(max-width:860px){.specs .in{grid-template-columns:1fr}}
+  .specs h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.02;letter-spacing:-.025em}
+  .specs h2 em{font-style:normal;color:var(--gold)}
+  .specs .kick{color:var(--gold)}
+  .specs .kick::before{background:var(--gold)}
+  .specs .blurb{color:rgba(243,235,221,.72);margin-top:1.1rem;max-width:38ch}
+  table.spec{width:100%;border-collapse:collapse;font-family:'Space Mono',monospace}
+  table.spec th,table.spec td{text-align:left;padding:.95rem .2rem;border-bottom:1px solid rgba(243,235,221,.15);vertical-align:top;font-weight:400}
+  table.spec th{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,235,221,.55);width:38%}
+  table.spec td{font-size:.86rem;color:var(--sand)}
+  table.spec tr:last-child th,table.spec tr:last-child td{border-bottom:none}
+
+  /* ---------- comparison ---------- */
+  .compare{max-width:1180px;margin:0 auto;padding:clamp(3.5rem,8vh,5.5rem) clamp(1.2rem,4vw,3.5rem)}
+  .compare h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.02;letter-spacing:-.025em;max-width:20ch}
+  .compare h2 em{font-style:normal;color:var(--pine)}
+  .tablewrap{overflow-x:auto;margin-top:2.2rem;border:1px solid var(--line);border-radius:12px;background:var(--sand-2)}
+  table.cmp{width:100%;border-collapse:collapse;min-width:600px}
+  table.cmp th,table.cmp td{padding:1rem 1.1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.9rem}
+  table.cmp thead th{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);background:var(--sand-3);font-weight:400}
+  table.cmp thead th.us{color:var(--sand);background:var(--rust)}
+  table.cmp tbody th{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:400;width:26%}
+  table.cmp td.us{background:rgba(191,83,39,.09);font-weight:600}
+  table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none}
+  .caveat{margin-top:1.2rem;font-size:.86rem;color:var(--ink-soft);max-width:70ch}
+  .caveat b{color:var(--rust-deep)}
+
+  /* ---------- craft band ---------- */
+  .craft{background:var(--pine-deep);color:var(--sand);position:relative;overflow:hidden;isolation:isolate}
+  .craft .topo{opacity:.07;filter:invert(1)}
+  .cb{max-width:1180px;margin:0 auto;padding:clamp(3.5rem,8vh,5.5rem) clamp(1.2rem,4vw,3.5rem);display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;position:relative;z-index:1}
+  @media(max-width:860px){.cb{grid-template-columns:1fr}}
+  .cb .shot{aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid rgba(243,235,221,.16)}
+  .cb .shot img{width:100%;height:100%;object-fit:cover}
+  .cb h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.03;letter-spacing:-.025em}
+  .cb h2 em{font-style:normal;color:var(--gold)}
+  .cb p{color:rgba(243,235,221,.75);margin-top:1.1rem;max-width:44ch}
+  .cb .kick{color:var(--gold)}.cb .kick::before{background:var(--gold)}
+
+  /* ---------- faq ---------- */
+  .faq{max-width:840px;margin:0 auto;padding:clamp(3.5rem,8vh,5.5rem) clamp(1.2rem,4vw,3.5rem)}
+  .faq h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(1.9rem,4.2vw,2.9rem);line-height:1.02;letter-spacing:-.025em;margin-bottom:2rem}
+  details{border-top:1px solid var(--line);padding:1.1rem 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;list-style:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.06rem;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';font-family:'Space Mono',monospace;color:var(--rust);font-size:1.2rem;flex:none;transition:transform .25s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{color:var(--ink-2);font-size:.96rem;margin-top:.8rem;max-width:62ch}
+
+  /* ---------- pairs well ---------- */
+  .pairs{background:var(--sand-2);border-top:1px solid var(--line)}
+  .pw{max-width:1180px;margin:0 auto;padding:clamp(3rem,7vh,4.5rem) clamp(1.2rem,4vw,3.5rem)}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.6rem);margin-top:2rem}
+  @media(max-width:760px){.pgrid{grid-template-columns:1fr}}
+  .pcard{background:var(--sand);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .3s,box-shadow .3s}
+  .pcard:hover{transform:translateY(-5px);box-shadow:0 20px 36px -22px rgba(33,27,19,.42)}
+  .pcard .ph{aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--sand-3)}
+  .pcard .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .pcard .i{padding:1rem 1.1rem 1.2rem}
+  .pcard .n{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.04rem;display:flex;justify-content:space-between;gap:.6rem;align-items:baseline}
+  .pcard .pr{font-family:'Space Mono',monospace;font-size:.86rem;color:var(--rust-deep);white-space:nowrap}
+  .pcard .d{font-size:.85rem;color:var(--ink-soft);margin-top:.35rem}
+
+  /* ---------- closing cta ---------- */
+  .cta{text-align:center;padding:clamp(4rem,10vh,7rem) clamp(1.2rem,4vw,3.5rem)}
+  .cta h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(2.2rem,6vw,4.2rem);line-height:1;letter-spacing:-.03em;max-width:16ch;margin:0 auto 1.3rem}
+  .cta h2 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--rust)}
+  .cta p{color:var(--ink-2);max-width:42ch;margin:0 auto 2rem}
+
+  /* footer */
+  footer{background:var(--ink);color:var(--sand);padding:clamp(3.5rem,7vh,5.5rem) clamp(1.2rem,4vw,3.5rem) 2rem}
+  .foot{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.2rem}
+  @media(max-width:860px){.foot{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.foot{grid-template-columns:1fr}}
+  .foot .brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.3rem;display:flex;align-items:center;gap:.6rem;margin-bottom:1rem}
+  .foot .brand .sos{width:34px;height:34px;border-radius:8px;background:var(--rust);display:grid;place-items:center}
+  .foot .brand .sos img{width:100%;height:100%;object-fit:contain;padding:5px}
+  .foot p{color:rgba(243,235,221,.68);font-size:.92rem;max-width:32ch}
+  .foot h4{font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+  .foot a{display:block;color:rgba(243,235,221,.78);font-size:.92rem;margin-bottom:.55rem;transition:color .25s}
+  .foot a:hover{color:var(--sand)}
+  .foot .contact span{display:block;color:rgba(243,235,221,.78);font-size:.92rem;margin-bottom:.55rem}
+  .foot-bottom{max-width:1180px;margin:3rem auto 0;padding-top:1.6rem;border-top:1px solid rgba(243,235,221,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.06em;color:rgba(243,235,221,.5);text-transform:uppercase}
+  .foot-bottom .made{color:var(--gold)}
+
+  /* internal review mode: ?review=1 */
+  body.review [data-est]{position:relative;outline:2px dashed var(--gold);outline-offset:3px;border-radius:4px}
+  body.review [data-est]::after{content:'CONFIRM';position:absolute;top:-1.1rem;right:0;font-family:'Space Mono',monospace;font-size:.54rem;letter-spacing:.1em;background:var(--gold);color:var(--ink);padding:.05rem .3rem;border-radius:3px;font-weight:700}
+  .reviewnote{display:none}
+  body.review .reviewnote{display:block;background:var(--gold);color:var(--ink);text-align:center;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1rem}
+</style>
+</head>
+<body>
+  <div class="reviewnote">Review mode — dashed items need confirming with David before launch</div>
+  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>Free U.S. shipping over $75</b></div>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <span class="sos"><img src="images/sos-logo.png" alt="Simple Outdoor Solutions"></span>
+        <span class="full">Simple Outdoor Solutions<small>Flagstaff, AZ · est. 2008</small></span>
+      </a>
+      <div class="menu">
+        <a href="shop.html">Shop</a>
+        <a href="outsak.html" aria-current="page">The Outsak</a>
+        <a href="story.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="cart" type="button">Cart <span class="badge">0</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <nav class="crumb"><a href="index.html">Home</a><span>/</span><a href="shop.html">Shop</a><span>/</span>The Outsak</nav>
+
+  <!-- ============ PDP ============ -->
+  <section class="pdp">
+    <!-- GALLERY -->
+    <div class="gallery">
+      <div class="frame" id="frame">
+        <!-- swap targets: 5.png (open, holding food) · 6.png (filled, on canyon rock) · 7.png (hung from juniper) · 8.png (beside a bear canister) -->
+        <img class="on" src="images/outsak-macro.jpg" alt="Close-up of the Outsak's interlocking stainless-steel wire mesh and black hook-and-loop closure" data-cap="Stainless mesh · hook-and-loop band">
+        <img src="images/outsak-ultralight.jpg" alt="The Outsak Ultralight" data-cap="Outsak Ultralight" loading="lazy">
+        <img src="images/outsak-spectrum.jpg" alt="The Outsak Spectrum, the larger mesh cache" data-cap="Outsak Spectrum" loading="lazy">
+        <img src="images/outsak-stack.jpg" alt="A fanned stack of finished Outsak bags" data-cap="Small-batch, fresh off the bench" loading="lazy">
+        <img src="images/outsak-ul-kit.jpg" alt="The Outsak UL Kit with liner and storage sleeve" data-cap="The UL Kit" loading="lazy">
+        <span class="cap" id="cap">Stainless mesh · hook-and-loop band</span>
+      </div>
+      <div class="thumbs" id="thumbs">
+        <button class="active" aria-label="Mesh close-up"><img src="images/outsak-macro.jpg" alt="" loading="lazy"></button>
+        <button aria-label="Outsak Ultralight"><img src="images/outsak-ultralight.jpg" alt="" loading="lazy"></button>
+        <button aria-label="Outsak Spectrum"><img src="images/outsak-spectrum.jpg" alt="" loading="lazy"></button>
+        <button aria-label="Finished stack"><img src="images/outsak-stack.jpg" alt="" loading="lazy"></button>
+        <button aria-label="UL Kit"><img src="images/outsak-ul-kit.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+
+    <!-- BUY BOX -->
+    <div class="buy">
+      <div class="eyebrow">The one that started it all</div>
+      <h1>The <em>Outsak</em>.</h1>
+      <p class="sub">An interlocking stainless-steel wire-mesh food bag that rodents simply can't chew through. Squirrels, mice, marmots, ravens — they gnaw, they give up. It weighs a fraction of a hard canister and packs flat when it's empty.</p>
+
+      <div class="priceline">
+        <!-- PRICE ESTIMATE — confirm with David -->
+        <span class="p" data-est id="price">from $44</span>
+        <span class="note">Handmade to order in Flagstaff</span>
+      </div>
+
+      <div class="opt">
+        <div class="lab">Model <b id="modelLabel">Ultralight</b></div>
+        <div class="swatches" id="models">
+          <button class="active" data-price="from $44" data-model="Ultralight">Ultralight<small>The original</small></button>
+          <button data-price="from $59" data-model="Spectrum">Spectrum<small>Bigger cache</small></button>
+          <button data-price="$64–71" data-model="UL Kit">UL Kit<small>+ liner &amp; sleeve</small></button>
+        </div>
+      </div>
+
+      <div class="buyrow">
+        <div class="qty">
+          <button type="button" id="minus" aria-label="Decrease quantity">−</button>
+          <span id="q">1</span>
+          <button type="button" id="plus" aria-label="Increase quantity">+</button>
+        </div>
+        <button class="btn btn-primary" id="addBtn">Add to cart</button>
+      </div>
+
+      <ul class="reassure">
+        <li>Sewn by hand in Flagstaff, Arizona — made in the USA</li>
+        <li>Free U.S. shipping on orders over $75</li>
+        <li>Questions on sizing? Call <a href="tel:+19286374007" style="text-decoration:underline">(928) 637-4007</a></li>
+      </ul>
+
+      <div class="closure">
+        <h3>About the closure</h3>
+        <p>The Outsak closes with a <b>black hook-and-loop top band</b> — fold the top over, press it shut, done. <b>There's no drawstring and no cord lock</b> to fray, jam, or freeze up, and nothing for a rodent to work a tooth into.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPECS ============ -->
+  <section class="specs">
+    <div class="topo"></div>
+    <div class="in">
+      <div class="rev">
+        <div class="kick">The numbers</div>
+        <h2>Simple, on <em>purpose</em>.</h2>
+        <p class="blurb">Mesh, thread, a hook-and-loop band. Nothing in it that can break, and nothing in it you're carrying for no reason.</p>
+      </div>
+      <div class="rev">
+        <table class="spec">
+          <tr><th>Material</th><td>Interlocking stainless-steel wire mesh</td></tr>
+          <tr><th>Closure</th><td>Black hook-and-loop top band — no drawstring</td></tr>
+          <!-- WEIGHT — confirm exact figures per size with David -->
+          <tr><th>Weight</th><td><span data-est>From 2.8 oz</span> · a fraction of a hard canister</td></tr>
+          <tr><th>Protects against</th><td>Mice, squirrels, chipmunks, marmots, ravens</td></tr>
+          <tr><th>Packed size</th><td>Folds flat — no fixed volume to carry when empty</td></tr>
+          <tr><th>Care</th><td>Rinse and air dry. Mesh doesn't hold odor.</td></tr>
+          <tr><th>Made</th><td>Cut and sewn by hand in Flagstaff, Arizona</td></tr>
+          <tr><th>Lifespan</th><td>Built to last decades of trips</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARISON ============ -->
+  <section class="compare">
+    <div class="rev">
+      <div class="kick">How it stacks up</div>
+      <h2>Against a hard canister and a <em>plain stuff sack</em>.</h2>
+    </div>
+    <div class="tablewrap rev">
+      <table class="cmp">
+        <thead><tr><th></th><th class="us">Outsak</th><th>Hard canister</th><th>Plain stuff sack</th></tr></thead>
+        <tbody>
+          <tr><th>Chew-proof</th><td class="us">Yes — steel mesh</td><td>Yes</td><td>No</td></tr>
+          <tr><th>Weight</th><td class="us">Ounces</td><td>Pounds</td><td>Ounces</td></tr>
+          <tr><th>Packs flat when empty</th><td class="us">Yes</td><td>No — fixed volume</td><td>Yes</td></tr>
+          <tr><th>Flexible around food</th><td class="us">Yes</td><td>No</td><td>Yes</td></tr>
+          <tr><th>Bear-resistant certified</th><td class="us">No</td><td>Yes</td><td>No</td></tr>
+          <tr><th>Costs</th><td class="us">Tens of dollars</td><td>Hundreds</td><td>Tens</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caveat rev"><b>Worth being straight about:</b> the Outsak is built for rodents and small critters — the animals that actually ruin most trips. It is <b>not</b> a certified bear-resistant container. Where a hard-sided canister is required by regulation, carry one (and our <a href="shop.html#straps" style="color:var(--rust-deep);text-decoration:underline">Bearikade Harness</a> makes it easier to carry). Check the rules for the unit you're entering before you go.</p>
+  </section>
+
+  <!-- ============ CRAFT ============ -->
+  <section class="craft">
+    <div class="topo"></div>
+    <div class="cb">
+      <div class="shot rev"><img src="images/craft-sewing.jpg" alt="An Outsak label being sewn under the needle" loading="lazy"></div>
+      <div class="rev">
+        <div class="kick">Made a handful at a time</div>
+        <h2>Every one of these went under <em>the same needle</em>.</h2>
+        <p>Each Outsak is cut, sewn, and closed by hand in Flagstaff, in small runs, with the label stitched on last and the hook-and-loop band checked before it leaves the bench. That's been the process since 2008 and there's no plan to change it.</p>
+        <a href="story.html" class="btn btn-ghost rev" style="margin-top:1.6rem;border-color:rgba(243,235,221,.5);color:#f7ede0">How it began →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq">
+    <div class="rev"><div class="kick">Common questions</div><h2>Before you buy.</h2></div>
+
+    <details class="rev"><summary>Will it stop a bear?</summary>
+      <p>No — and we won't pretend otherwise. The Outsak is designed for rodents and small animals: mice, squirrels, chipmunks, marmots, ravens. Those are what get into food on the overwhelming majority of trips. Where a certified bear-resistant canister is required, use one.</p></details>
+
+    <details class="rev"><summary>Does it close with a drawstring?</summary>
+      <p>No. It closes with a black hook-and-loop top band — fold, press, done. There's no cord to fray or cord lock to break, and nothing loose for an animal to chew at.</p></details>
+
+    <details class="rev"><summary>Which size should I get?</summary>
+      <p>The Ultralight suits solo and weekend trips; the Spectrum is the larger cache for groups, base camps, and longer stretches between resupply. If you're between the two, call <a href="tel:+19286374007" style="color:var(--rust-deep);text-decoration:underline">(928) 637-4007</a> and describe the trip — we'll tell you straight.</p></details>
+
+    <details class="rev"><summary>Won't the mesh crush my food?</summary>
+      <p>The mesh is flexible, so it forms around what's inside rather than forcing a shape on it. For powdered dinners, crumbs, and anything you'd rather not push through steel, add a <a href="shop.html#food" style="color:var(--rust-deep);text-decoration:underline">Slap Bag</a> liner.</p></details>
+
+    <details class="rev"><summary>How do I hang it?</summary>
+      <p>It hangs like any food bag — from a branch, a rock horn, or off the side of your pack in camp. It also works flat on the ground under a pack, which a rigid canister can't do.</p></details>
+
+    <details class="rev"><summary>How long does it last?</summary>
+      <p>Stainless steel doesn't rot, rust out, or absorb odor, so the mesh outlives most of the gear around it. Rinse it, let it dry, fold it flat in a <a href="shop.html#accessories" style="color:var(--rust-deep);text-decoration:underline">Storage Sleeve</a> between trips.</p></details>
+  </section>
+
+  <!-- ============ PAIRS WELL ============ -->
+  <section class="pairs">
+    <div class="pw">
+      <div class="rev"><div class="kick">Goes with it</div></div>
+      <div class="pgrid">
+        <a class="pcard rev" href="shop.html#food">
+          <div class="ph"><img src="images/slap-bag.jpg" alt="Slap Bag liner" loading="lazy"></div>
+          <div class="i"><div class="n">Slap Bag <span class="pr" data-est>$12–16</span></div><div class="d">Ripstop liner — keeps crumbs off the mesh.</div></div>
+        </a>
+        <a class="pcard rev" href="shop.html#accessories">
+          <div class="ph"><img src="images/storage-sleeve.jpg" alt="Storage sleeve" loading="lazy"></div>
+          <div class="i"><div class="n">Storage Sleeve <span class="pr" data-est>from $10</span></div><div class="d">Keeps it folded flat between trips.</div></div>
+        </a>
+        <a class="pcard rev" href="shop.html#straps">
+          <div class="ph"><img src="images/bearikade-harness.jpg" alt="Bearikade harness" loading="lazy"></div>
+          <div class="i"><div class="n">Bearikade Harness <span class="pr">from $37.50</span></div><div class="d">For the trips where a canister is required.</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="rev">
+      <div class="kick" style="justify-content:center">Ounces matter</div>
+      <h2>Carry less. <em>Go deeper.</em></h2>
+      <p>Leave the canister behind on the trips that don't need one, and put those pounds back into miles.</p>
+      <a href="shop.html" class="btn btn-primary">See the full catalog →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot">
+      <div>
+        <div class="brand"><span class="sos"><img src="images/sos-logo.png" alt="Simple Outdoor Solutions"></span> Simple Outdoor Solutions</div>
+        <p>Handmade ultralight backpacking gear, sewn by hand in the high pines of Flagstaff, Arizona. Born in the Grand Canyon, made by hand since 2008.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="outsak.html">The Outsak</a><a href="shop.html#coolers">Coolers &amp; Cozies</a><a href="shop.html#straps">Straps &amp; Harnesses</a><a href="shop.html#accessories">Accessories</a><a href="shop.html#kits">Kits &amp; Bundles</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="story.html">Our Story</a><a href="contact.html#warranty">Warranty</a><a href="contact.html#shipping">Shipping &amp; Returns</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="contact">
+        <h4>Visit / Reach us</h4>
+        <span>11600 N Onika Ln<br>Flagstaff, AZ</span>
+        <span>(928) 637-4007</span>
+        <a href="mailto:info@simpleoutdoorstore.com">info@simpleoutdoorstore.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Simple Outdoor Solutions, LLC</span>
+      <span class="made">✦ Handmade in Flagstaff, AZ · Made in USA</span>
+    </div>
+  </footer>
+
+<script>
+  /* scroll reveals */
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rev').forEach((el,i)=>{el.style.transitionDelay=((i%3)*70)+'ms';io.observe(el)});
+
+  /* gallery */
+  const shots=[...document.querySelectorAll('#frame img')];
+  const thumbs=[...document.querySelectorAll('#thumbs button')];
+  const cap=document.getElementById('cap');
+  thumbs.forEach((t,i)=>t.addEventListener('click',()=>{
+    shots.forEach((s,j)=>s.classList.toggle('on',i===j));
+    thumbs.forEach((b,j)=>b.classList.toggle('active',i===j));
+    cap.textContent=shots[i].dataset.cap||'';
+  }));
+
+  /* model selector */
+  const price=document.getElementById('price'),modelLabel=document.getElementById('modelLabel');
+  document.querySelectorAll('#models button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelector('#models .active')?.classList.remove('active');
+    b.classList.add('active');
+    price.textContent=b.dataset.price;
+    modelLabel.textContent=b.dataset.model;
+  }));
+
+  /* quantity */
+  let q=1;const qEl=document.getElementById('q');
+  document.getElementById('plus').onclick=()=>{q=Math.min(q+1,20);qEl.textContent=q};
+  document.getElementById('minus').onclick=()=>{q=Math.max(q-1,1);qEl.textContent=q};
+
+  /* demo cart */
+  let n=0;const badge=document.querySelector('.cart .badge'),addBtn=document.getElementById('addBtn');
+  addBtn.addEventListener('click',()=>{
+    n+=q;badge.textContent=n;
+    addBtn.textContent='Added ✓';addBtn.style.background='var(--pine)';
+    setTimeout(()=>{addBtn.textContent='Add to cart';addBtn.style.background=''},1100);
+  });
+
+  /* internal review mode */
+  if(new URLSearchParams(location.search).get('review')==='1') document.body.classList.add('review');
+</script>
+</body>
+</html>
