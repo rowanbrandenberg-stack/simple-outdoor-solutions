@@ -48,18 +48,39 @@ Append `?review=1` to `shop.html` or `outsak.html` to highlight every value that
 still needs confirming (estimated prices, the Outsak weight figure). Invisible to
 customers, so it can ship as-is.
 
+## Confirmed from the old site (simpleoutdoorstore.com)
+
+Outsak sizing and pricing is now **verified** against the old site's comparison
+chart and product pages, and is live on `shop.html` and `outsak.html`:
+
+| Size | Series | Capacity | Weight | Dimensions | Price |
+|---|---|---|---|---|---|
+| UL micro | Ultralight | 4.3 L | 2.5 oz | 10 × 13 in | $39 |
+| UL | Ultralight | 7.5 L | 3.4 oz | 10 × 19 in | $43 |
+| X-Small | Spectrum | 9 L | 6.5 oz | 14 × 14 in | $40 |
+| Small | Spectrum | 12.15 L | 7.5 oz | 14 × 18 in | $44 |
+| Medium | Spectrum | 20.5 L | 10 oz | 18 × 18 in | $50 |
+| Large | Spectrum | 25.7 L | 11.5 oz | 18 × 22 in | $55 |
+
+Also verified: **three-year warranty** on every Outsak · genuine **VELCRO®**
+closure "guaranteed not to mold, mildew, or rot" · Ultralight uses 1-inch
+polypropylene webbing, Spectrum uses 2-inch polyester seatbelt webbing with a UV
+inhibitor · Spectrum comes in eight colours and ships with a free carry strap ·
+protects against rock squirrels, rats, mice, chipmunks, raccoons, skunks, marmots.
+
+Two earlier estimates were **wrong** and have been corrected: Outsak Ultralight
+was showing "from $44" (actually $39) and Outsak Spectrum "from $59" (actually $40).
+
 ## Still to confirm with David
 
-Prices below are estimates carried over from the old site and are marked with
-`data-est` in the HTML:
+These prices are still estimates carried over from the handoff and are marked with
+`data-est` in the HTML (visible via `?review=1`):
 
 | Product | Shown | Status |
 |---|---|---|
-| Outsak UL Kits | $64–71 | confirmed |
-| Bearikade Harness (+straps $48.50–54.50) | from $37.50 | confirmed |
-| Escape Pod Bearikade Cooler | $49–77 | confirmed |
-| Outsak Ultralight | from $44 | **estimate** |
-| Outsak Spectrum | from $59 | **estimate** |
+| Outsak UL Kits | $64–71 | confirmed, per handoff |
+| Bearikade Harness (+straps $48.50–54.50) | from $37.50 | confirmed, per handoff |
+| Escape Pod Bearikade Cooler | $49–77 | confirmed, per handoff |
 | Escape Pod (soft cooler) | from $39 | **estimate** |
 | Escape Pouch | from $18 | **estimate** |
 | Canyon Strap | from $22 | **estimate** |
@@ -71,12 +92,22 @@ Prices below are estimates carried over from the old site and are marked with
 
 Also outstanding:
 
-- **Outsak weight** — `outsak.html` shows "from 2.8 oz". Confirm per size.
-- **Sizes and capacities** — no dimensions are published anywhere yet, because none
-  were verified. Add them to the spec table on `outsak.html` once known.
+- **Phone number.** The site uses (928) 637-4007, from the handoff. The old site's
+  FAQ page lists **(928) 526-5774**. Confirm which is current.
+- **Email.** The old site's contact page gives info@simpleoutdoorstore.com and says
+  email is the best way to reach them; its homepage footer shows jen@ instead.
+  We use info@ throughout.
+- **Free shipping.** An earlier draft advertised "Free U.S. shipping over $75" in the
+  announcement bar and on the product page. Nothing on the old site supports that, so
+  it has been replaced with the verified three-year warranty line. Put it back once
+  David confirms the actual threshold.
 - **Shipping turnaround, rates, return window** — placeholders on `contact.html`.
-- **Reviews** — the three testimonials on `index.html` are still placeholders and
-  are labelled as such on the page. Replace with real reviews before launch.
+- **Reviews.** Trailspace has only two reviews of the Outsak UL (average 3.0): a
+  5-star field-test review from 2010 and a 0.5-star review from May 2026 about a
+  refund dispute. Not usable as marketing copy. The fabricated "verified buyer"
+  testimonials that were on the homepage have been **removed** and replaced with
+  verifiable facts (warranty, weight, made-in-USA). Collect real reviews before
+  adding a testimonial section back.
 - **Gallery photos** — `outsak.html` currently uses the studio and macro shots.
   Swap in `5.png` (open, holding trail food), `6.png` (filled, on a canyon rock),
   `7.png` (hung from a juniper), `8.png` (beside a bear canister) when available;
