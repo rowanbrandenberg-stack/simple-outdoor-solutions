@@ -230,6 +230,14 @@
   .spot-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .logo .sos img,.foot .brand .sos img{width:100%;height:100%;object-fit:contain;padding:5px;display:block}
   #heroPhoto{background-image:url(images/hero-canyon.jpg)}
+  /* Art-directed mobile hero. On a tall narrow viewport, background-size:cover shows
+     the image's full HEIGHT and crops the width, so background-position's vertical
+     value has no effect and the landscape vista renders as ~42% empty sky. This crop
+     removes most of the sky so the canyon actually fills the frame on a phone. */
+  @media(max-width:760px){
+    .hero{min-height:88svh}
+    #heroPhoto{background-image:url(images/hero-canyon-mobile.jpg);background-position:62% center}
+  }
   #storyPhoto{background-image:url(images/story-canyon.jpg);background-size:cover;background-position:center}
   .canyon-band{background-image:linear-gradient(rgba(18,9,4,.5),rgba(18,9,4,.62)),url(images/interlude-canyon.jpg);background-size:cover;background-position:center}
 </style>
