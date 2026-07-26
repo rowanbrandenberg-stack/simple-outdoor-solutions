@@ -74,10 +74,29 @@
   .foot .col h4{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
   .foot .col span,.foot .col a{display:block;color:rgba(243,235,221,.78);font-size:.92rem;margin-bottom:.5rem}
   .foot-bottom{max-width:1180px;margin:2.5rem auto 0;padding-top:1.4rem;border-top:1px solid rgba(243,235,221,.14);font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.06em;color:rgba(243,235,221,.5);text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+
+  /* ---- touch targets: keep every interactive row at or above 44px ---- */
+  .cart{min-height:44px}
+  summary{min-height:44px}
+  .crumb a{display:inline-block;padding:.4rem 0}
+  @media(max-width:900px){
+    .cats button{min-height:44px;display:inline-flex;align-items:center}
+    .swatches button{min-height:48px}
+    .qty button{min-height:48px}
+    .btn{padding:1rem 1.7rem;min-height:48px}
+    .add{min-height:46px}
+    .detail{padding:.5rem 0}
+    details{padding:.55rem 0}
+    summary{min-height:48px}
+    .foot a{min-height:40px;display:flex;align-items:center}
+    .foot .contact a{min-height:44px}
+    .field input,.field select,.field textarea{min-height:48px;font-size:1rem}
+    .thumbs button{min-height:56px}
+  }
 </style>
 </head>
 <body>
-  <div class="announce">Handmade in Flagstaff, Arizona since 2008</div>
+  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>Free U.S. shipping over $100</b> · $4 flat under</div>
   <header><nav class="nav">
     <a href="index.html" class="logo"><span class="sos"><img src="images/sos-logo.png" alt="SOS"></span><span class="full">Simple Outdoor Solutions<small>Flagstaff, AZ · est. 2008</small></span></a>
     <div class="menu"><a href="shop.html">Shop</a><a href="outsak.html">The Outsak</a><a href="story.html">Our Story</a><a href="contact.html">Contact</a></div>

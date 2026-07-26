@@ -82,7 +82,7 @@
   .field input::placeholder,.field textarea::placeholder{color:var(--stone)}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
   @media(max-width:560px){.two{grid-template-columns:1fr}}
-  .hp{position:absolute;left:-9999px}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
   .formfoot{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-top:.4rem}
   .formfoot .fine{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);max-width:30ch;line-height:1.5}
 
@@ -140,10 +140,29 @@
   .foot .contact span{display:block;color:rgba(243,235,221,.78);font-size:.92rem;margin-bottom:.55rem}
   .foot-bottom{max-width:1180px;margin:3rem auto 0;padding-top:1.6rem;border-top:1px solid rgba(243,235,221,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.06em;color:rgba(243,235,221,.5);text-transform:uppercase}
   .foot-bottom .made{color:var(--gold)}
+
+  /* ---- touch targets: keep every interactive row at or above 44px ---- */
+  .cart{min-height:44px}
+  summary{min-height:44px}
+  .crumb a{display:inline-block;padding:.4rem 0}
+  @media(max-width:900px){
+    .cats button{min-height:44px;display:inline-flex;align-items:center}
+    .swatches button{min-height:48px}
+    .qty button{min-height:48px}
+    .btn{padding:1rem 1.7rem;min-height:48px}
+    .add{min-height:46px}
+    .detail{padding:.5rem 0}
+    details{padding:.55rem 0}
+    summary{min-height:48px}
+    .foot a{min-height:40px;display:flex;align-items:center}
+    .foot .contact a{min-height:44px}
+    .field input,.field select,.field textarea{min-height:48px;font-size:1rem}
+    .thumbs button{min-height:56px}
+  }
 </style>
 </head>
 <body>
-  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>3-year warranty on every Outsak</b></div>
+  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>Free U.S. shipping over $100</b> · $4 flat under</div>
 
   <header>
     <nav class="nav">
@@ -241,26 +260,36 @@
     <div class="pol">
       <section id="shipping" class="rev">
         <div class="kick">Shipping &amp; returns</div>
-        <h2>Made to order, <em>shipped fast</em>.</h2>
-        <p>Everything is sewn in small batches in Flagstaff, so orders ship from here — not from a warehouse three time zones away.</p>
+        <h2>Ships from Flagstaff, <em>usually same day</em>.</h2>
+        <p>Everything is sewn in small batches here, so orders leave from Flagstaff — not from a warehouse three time zones away.</p>
         <ul>
-          <li>Orders ship from Flagstaff, Arizona — not from a warehouse three time zones away.</li>
-          <li>If a size is between batches, we'll tell you when you order rather than leave you guessing.</li>
-          <li>Something not right? Get in touch and we'll sort it out — exchange, repair, or refund.</li>
+          <li><b>Free USPS Ground shipping</b> on orders of $100 or more, before tax and after discounts.</li>
+          <li>Orders under $100 ship for a flat <b>$4</b>.</li>
+          <li><b>Priority</b> (2–3 business days) is <b>$14.99</b> for the whole order.</li>
+          <li>Most orders ship within 24 hours. We ship six days a week, and often the same day.</li>
+          <li><b>No international orders</b> at this time.</li>
         </ul>
-        <p class="tbc">Shipping rates, turnaround, and return window to be confirmed before launch</p>
+        <h2 style="font-size:clamp(1.2rem,2.4vw,1.5rem);margin-top:1.8rem">Returns</h2>
+        <ul>
+          <li><b>30 calendar days</b> from your order confirmation email.</li>
+          <li>The product needs to be new, unused, undamaged and in sellable condition.</li>
+          <li>Get a Return Goods Authorization code from us before shipping anything back.</li>
+          <li>Return shipping is on you — but the gear is light, so it isn't much.</li>
+        </ul>
       </section>
 
       <section id="warranty" class="rev">
         <div class="kick">Warranty</div>
         <h2>We stand behind <em>every stitch</em>.</h2>
-        <p>Each piece leaves one bench, checked by hand. If a seam, a strap, or a hook-and-loop band fails in normal use, tell us and we'll make it right.</p>
+        <p>Each piece leaves one bench, checked by hand. If something fails in normal use, tell us and we'll make it right. Warranty length depends on the product:</p>
         <ul>
-          <li>Every <b>Outsak</b> carries a <b>three-year warranty</b>. The <b>Adventure Seat</b> carries a lifetime warranty.</li>
-          <li>Repairs come before replacements where a repair is the better answer — that's how gear should work.</li>
-          <li>Wear from bears, rockfall, or a mule stepping on it isn't a defect, but write anyway. We've seen worse.</li>
+          <li><b>Adventure Seat&reg; — lifetime.</b> No time limit, not ever.</li>
+          <li><b>Outsak&reg; bags — three years</b> from the date of purchase.</li>
+          <li><b>Harnesses, straps, liners, trail bags and sleeves — one year.</b></li>
+          <li><b>Escape Pod and Escape Pouch — 180 days.</b></li>
         </ul>
-        <p class="tbc">Warranty terms for the non-Outsak products to be confirmed before launch</p>
+        <p>Cover is for defects in stitching, materials and workmanship. Commercial use and modified gear are excluded. Repairs come before replacements where a repair is the better answer — that's how gear should work.</p>
+        <p>Wear from bears, rockfall, or a mule stepping on it isn't a defect, but write anyway. We've seen worse.</p>
       </section>
     </div>
   </div>

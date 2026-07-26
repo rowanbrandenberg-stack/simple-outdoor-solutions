@@ -145,10 +145,29 @@
   body.review [data-est]{position:relative;outline:2px dashed var(--gold);outline-offset:3px;border-radius:4px}
   body.review [data-est]::after{content:'EST';position:absolute;top:-1.15rem;right:0;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.1em;background:var(--gold);color:var(--ink);padding:.05rem .3rem;border-radius:3px;font-weight:700}
   .reviewnote{display:block;background:var(--gold);color:var(--ink);text-align:center;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1rem}
+
+  /* ---- touch targets: keep every interactive row at or above 44px ---- */
+  .cart{min-height:44px}
+  summary{min-height:44px}
+  .crumb a{display:inline-block;padding:.4rem 0}
+  @media(max-width:900px){
+    .cats button{min-height:44px;display:inline-flex;align-items:center}
+    .swatches button{min-height:48px}
+    .qty button{min-height:48px}
+    .btn{padding:1rem 1.7rem;min-height:48px}
+    .add{min-height:46px}
+    .detail{padding:.5rem 0}
+    details{padding:.55rem 0}
+    summary{min-height:48px}
+    .foot a{min-height:40px;display:flex;align-items:center}
+    .foot .contact a{min-height:44px}
+    .field input,.field select,.field textarea{min-height:48px;font-size:1rem}
+    .thumbs button{min-height:56px}
+  }
 </style>
 </head>
 <body>
-  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>3-year warranty on every Outsak</b></div>
+  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>Free U.S. shipping over $100</b> · $4 flat under</div>
 
   <header>
     <nav class="nav">
@@ -202,143 +221,143 @@
   <section class="wrap">
     <div class="products" id="grid">
 
-      <!-- FOOD PROTECTION -->
       <article class="card rev" data-cat="food">
-        <a class="ph" href="outsak.html"><span class="flag">The original</span><img src="images/outsak-ultralight.jpg" alt="Outsak Ultralight stainless wire-mesh food bag" loading="lazy"><span class="mat">Stainless mesh</span></a>
+        <a class="ph" href="outsak.html"><span class="flag">The original</span><img src="images/outsak-ultralight.jpg" alt="Outsak Ultralight" loading="lazy"><span class="mat">Stainless mesh</span></a>
         <div class="info">
           <div class="name"><a href="outsak.html">Outsak Ultralight</a> <span class="price">from $39</span></div>
-          <p class="desc">The animal-proof wire-mesh bag that started the whole thing. Two sizes, 2.5–3.4 oz, 4.3 or 7.5 litres. Black 1-inch webbing, VELCRO® top band.</p>
+          <p class="desc">The animal-proof wire-mesh bag that started the whole thing. Two sizes, 2.5–3.4 oz, 4.3 or 7.5 litres. Black webbing, Velcro&reg; top band.</p>
           <button class="add">Add to cart</button>
           <a class="detail" href="outsak.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
       <article class="card rev" data-cat="food">
-        <a class="ph" href="outsak.html"><span class="flag">Best seller</span><img src="images/outsak-spectrum.jpg" alt="Outsak Spectrum wire-mesh food cache" loading="lazy"><span class="mat">Stainless mesh</span></a>
+        <a class="ph" href="outsak.html"><span class="flag">Best seller</span><img src="images/outsak-spectrum.jpg" alt="Outsak Spectrum" loading="lazy"><span class="mat">Stainless mesh</span></a>
         <div class="info">
-          <div class="name">Outsak Spectrum <span class="price">from $40</span></div>
+          <div class="name"><a href="outsak.html">Outsak Spectrum</a> <span class="price">from $40</span></div>
           <p class="desc">Four sizes from 9 to 25.7 litres in eight colours, on 2-inch UV-stable seatbelt webbing. A free carry strap comes with it.</p>
           <button class="add">Add to cart</button>
+          <a class="detail" href="outsak.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
       <article class="card rev" data-cat="food kits">
-        <div class="ph"><span class="flag">Kit · save</span><img src="images/outsak-ul-kit.jpg" alt="Outsak Ultralight kit with liner and storage sleeve" loading="lazy"><span class="mat">Complete kit</span></div>
+        <a class="ph" href="outsak-ul-kit.html"><span class="flag">Kit · save</span><img src="images/outsak-ul-kit.jpg" alt="Outsak UL Kit" loading="lazy"><span class="mat">Complete kit</span></a>
         <div class="info">
-          <div class="name">Outsak UL Kit <span class="price">$64–71</span></div>
-          <p class="desc">Everything together: the Outsak Ultralight, a slap-bag liner to keep crumbs off the mesh, and a storage sleeve for the off-season.</p>
+          <div class="name"><a href="outsak-ul-kit.html">Outsak UL Kit</a> <span class="price">$64–71</span></div>
+          <p class="desc">Bag, Slap Bag liner and matching Storage Sleeve together — about $11 less than buying the three separately.</p>
           <button class="add">Add to cart</button>
+          <a class="detail" href="outsak-ul-kit.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
       <article class="card rev" data-cat="food">
-        <div class="ph"><img src="images/slap-bag.jpg" alt="Slap Bag ripstop liner" loading="lazy"><span class="mat">Ripstop liner</span></div>
+        <a class="ph" href="slap-bag.html"><img src="images/slap-bag.jpg" alt="Slap Bag" loading="lazy"><span class="mat">Sil nylon</span></a>
         <div class="info">
-          <!-- PRICE ESTIMATE — confirm with David -->
-          <div class="name">Slap Bag <span class="price" data-est>$12–16</span></div>
-          <p class="desc">A light ripstop liner that keeps crumbs, wrappers, and powdered dinners on the inside of the mesh where they belong.</p>
+          <div class="name"><a href="slap-bag.html">Slap Bag</a> <span class="price">$25–29</span></div>
+          <p class="desc">A 30-denier sil nylon liner with a Velcro&reg; slap top and Dyneema&reg; pull loops. Keeps crumbs off the mesh.</p>
           <button class="add">Add to cart</button>
+          <a class="detail" href="slap-bag.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
       <article class="card rev" data-cat="food">
-        <div class="ph"><img src="images/overkill-slap-bag.jpg" alt="Overkill Slap Bag reinforced liner" loading="lazy"><span class="mat">Reinforced</span></div>
+        <a class="ph" href="overkill-slap-bag.html"><span class="flag">Dyneema</span><img src="images/overkill-slap-bag.jpg" alt="Overkill Slap Bag" loading="lazy"><span class="mat">Dyneema</span></a>
         <div class="info">
-          <!-- PRICE ESTIMATE — confirm with David -->
-          <div class="name">Overkill Slap Bag <span class="price" data-est>$12–16</span></div>
-          <p class="desc">The heavier-duty liner, for loads with sharp corners and long trips that ask more of a bag than they should.</p>
+          <div class="name"><a href="overkill-slap-bag.html">Overkill Slap Bag</a> <span class="price">$55–65</span></div>
+          <p class="desc">The same liner in full Dyneema&reg;, ten colours. For long-term caches and loads that punish a bag.</p>
           <button class="add">Add to cart</button>
-        </div>
-      </article>
-
-      <!-- COOLERS & COZIES -->
-      <article class="card rev" data-cat="coolers">
-        <div class="ph"><span class="flag">Fits Bearikade</span><img src="images/escape-pod-bearikade.jpg" alt="Escape Pod insulated sleeve for a Bearikade canister" loading="lazy"><span class="mat">Reflectix</span></div>
-        <div class="info">
-          <div class="name">Escape Pod Bearikade Cooler <span class="price">$49–77</span></div>
-          <p class="desc">An insulated jacket that turns a Bearikade canister into a cooler. Cold drinks on day three, or a hot meal that's still hot.</p>
-          <button class="add">Add to cart</button>
+          <a class="detail" href="overkill-slap-bag.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
       <article class="card rev" data-cat="coolers">
-        <div class="ph"><img src="images/escape-pod.jpg" alt="Escape Pod soft-sided cooler" loading="lazy"><span class="mat">Reflectix</span></div>
+        <a class="ph" href="escape-pod-bearikade.html"><span class="flag">Fits Bearikade</span><img src="images/escape-pod-bearikade.jpg" alt="Escape Pod Bearikade Cooler" loading="lazy"><span class="mat">Reflectix</span></a>
         <div class="info">
-          <!-- PRICE ESTIMATE — confirm with David -->
-          <div class="name">Escape Pod Cooler <span class="price" data-est>from $39</span></div>
-          <p class="desc">Soft-sided and double-walled, so it packs down to nothing and works both directions — hot or cold, all day.</p>
+          <div class="name"><a href="escape-pod-bearikade.html">Escape Pod Bearikade Cooler</a> <span class="price">$49–77</span></div>
+          <p class="desc">Three Reflectix&reg; pieces that fit inside a Scout, Weekender, Blazer or Expedition Bearikade. 4.8–7 oz.</p>
           <button class="add">Add to cart</button>
+          <a class="detail" href="escape-pod-bearikade.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
       <article class="card rev" data-cat="coolers">
-        <div class="ph"><img src="images/escape-pouch.jpg" alt="Escape Pouch freeze-dried meal cozy" loading="lazy"><span class="mat">Reflectix</span></div>
+        <a class="ph" href="escape-pod.html"><img src="images/escape-pod.jpg" alt="Escape Pod Cooler" loading="lazy"><span class="mat">Reflectix</span></a>
         <div class="info">
-          <!-- PRICE ESTIMATE — confirm with David -->
-          <div class="name">Escape Pouch <span class="price" data-est>from $18</span></div>
-          <p class="desc">A meal cozy sized for a freeze-dried pouch. Pour, seal, walk five minutes, eat something that's actually rehydrated.</p>
+          <div class="name"><a href="escape-pod.html">Escape Pod Cooler</a> <span class="price">$25–33</span></div>
+          <p class="desc">Double-walled Reflectix&reg; that blocks 96% of radiant heat, from 2.4 oz. Hot or cold, three sizes.</p>
           <button class="add">Add to cart</button>
+          <a class="detail" href="escape-pod.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
-      <!-- STRAPS & HARNESSES -->
-      <article class="card rev" data-cat="straps">
-        <div class="ph"><img src="images/bearikade-harness.jpg" alt="Bearikade Harness webbing straps" loading="lazy"><span class="mat">Webbing</span></div>
+      <article class="card rev" data-cat="coolers">
+        <a class="ph" href="escape-pouch.html"><img src="images/escape-pouch.jpg" alt="Escape Pouch" loading="lazy"><span class="mat">Reflectix</span></a>
         <div class="info">
-          <div class="name">Bearikade Harness <span class="price">from $37.50</span></div>
-          <p class="desc">Lashes a Bearikade canister to any pack so it rides where you want it. Add straps for $48.50–54.50.</p>
+          <div class="name"><a href="escape-pouch.html">Escape Pouch</a> <span class="price">from $24</span></div>
+          <p class="desc">A 1.1 oz meal cozy for Mountain House&reg; pouches. v2.0 has a gusseted bottom and stands up on its own.</p>
           <button class="add">Add to cart</button>
-        </div>
-      </article>
-
-      <article class="card rev" data-cat="straps">
-        <div class="ph"><img src="images/canyon-strap.jpg" alt="Canyon Strap reflective bottle harness" loading="lazy"><span class="mat">Reflective</span></div>
-        <div class="info">
-          <!-- PRICE ESTIMATE — confirm with David -->
-          <div class="name">Canyon Strap <span class="price" data-est>from $22</span></div>
-          <p class="desc">A reflective bottle harness that fits a Nalgene and keeps water where you can reach it without stopping.</p>
-          <button class="add">Add to cart</button>
+          <a class="detail" href="escape-pouch.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
       <article class="card rev" data-cat="straps">
-        <div class="ph"><img src="images/flagstrap.jpg" alt="FlagStrap crossbody carry strap" loading="lazy"><span class="mat">Webbing</span></div>
+        <a class="ph" href="bearikade-harness.html"><img src="images/bearikade-harness.jpg" alt="Bearikade Harness" loading="lazy"><span class="mat">Webbing</span></a>
         <div class="info">
-          <!-- PRICE ESTIMATE — confirm with David -->
-          <div class="name">FlagStrap <span class="price" data-est>from $28</span></div>
-          <p class="desc">Hands-free crossbody carry for the things you keep reaching for. Two sizes, honest webbing, simple hardware.</p>
+          <div class="name"><a href="bearikade-harness.html">Bearikade Harness</a> <span class="price">$37.50–43.50</span></div>
+          <p class="desc">Two webbing pieces that clip a Bearikade to any pack. Four D-rings, a real handle, 2.2–2.4 oz.</p>
           <button class="add">Add to cart</button>
+          <a class="detail" href="bearikade-harness.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
-      <!-- ACCESSORIES -->
-      <article class="card rev" data-cat="accessories">
-        <div class="ph"><span class="flag">Lifetime warranty</span><img src="images/adventure-seat.jpg" alt="Adventure Seat insulated sit pad" loading="lazy"><span class="mat">Insulated</span></div>
+      <article class="card rev" data-cat="straps">
+        <a class="ph" href="canyon-strap.html"><img src="images/canyon-strap.jpg" alt="Canyon Strap" loading="lazy"><span class="mat">Reflective</span></a>
         <div class="info">
-          <!-- PRICE ESTIMATE — confirm with David -->
-          <div class="name">Adventure Seat <span class="price" data-est>from $32</span></div>
-          <p class="desc">Insulated, reflective, and close to indestructible. Cold rock, wet log, gravel bar — it doesn't care. Lifetime warranty.</p>
+          <div class="name"><a href="canyon-strap.html">Canyon Strap</a> <span class="price">$23.50–25.50</span></div>
+          <p class="desc">A reflective webbing holder for a wide-mouth Nalgene&reg;, five colours. Or $34–37 with a bottle included.</p>
           <button class="add">Add to cart</button>
+          <a class="detail" href="canyon-strap.html">See specs &amp; sizes →</a>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="straps">
+        <a class="ph" href="flagstrap.html"><img src="images/flagstrap.jpg" alt="FlagStrap" loading="lazy"><span class="mat">Webbing</span></a>
+        <div class="info">
+          <div class="name"><a href="flagstrap.html">FlagStrap</a> <span class="price">$28–30</span></div>
+          <p class="desc">Hands-free crossbody or over-the-shoulder carry, adjustable 33 to 63 inches, with dual reflective panels.</p>
+          <button class="add">Add to cart</button>
+          <a class="detail" href="flagstrap.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
       <article class="card rev" data-cat="accessories">
-        <div class="ph"><img src="images/trail-bag.jpg" alt="Dyneema Trail Bag stuff sack" loading="lazy"><span class="mat">Dyneema</span></div>
+        <a class="ph" href="adventure-seat.html"><span class="flag">Lifetime warranty</span><img src="images/adventure-seat.jpg" alt="Adventure Seat" loading="lazy"><span class="mat">Cordura</span></a>
         <div class="info">
-          <!-- PRICE ESTIMATE — confirm with David -->
-          <div class="name">Trail Bag <span class="price" data-est>from $26</span></div>
-          <p class="desc">A Dyneema stuff sack that weighs almost nothing and refuses to tear. For the kit you want sorted, not rattling.</p>
+          <div class="name"><a href="adventure-seat.html">Adventure Seat</a> <span class="price">$22.50–36.50</span></div>
+          <p class="desc">Half an inch of closed-cell foam in a Cordura&reg; shell. R-value 4, four sizes, five colours.</p>
           <button class="add">Add to cart</button>
+          <a class="detail" href="adventure-seat.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
       <article class="card rev" data-cat="accessories">
-        <div class="ph"><img src="images/storage-sleeve.jpg" alt="Outsak storage sleeve" loading="lazy"><span class="mat">Packs flat</span></div>
+        <a class="ph" href="trail-bag.html"><img src="images/trail-bag.jpg" alt="Trail Bag" loading="lazy"><span class="mat">Dyneema</span></a>
         <div class="info">
-          <!-- PRICE ESTIMATE — confirm with David -->
-          <div class="name">Storage Sleeve <span class="price" data-est>from $10</span></div>
-          <p class="desc">Keeps your Outsak folded flat and out of the way between trips, so the mesh stays true for the next decade.</p>
+          <div class="name"><a href="trail-bag.html">Trail Bag</a> <span class="price">$24–35</span></div>
+          <p class="desc">Dyneema&reg; with a full-length YKK&reg; zipper, from half an ounce. Three sizes, ten colours.</p>
           <button class="add">Add to cart</button>
+          <a class="detail" href="trail-bag.html">See specs &amp; sizes →</a>
+        </div>
+      </article>
+
+      <article class="card rev" data-cat="accessories">
+        <a class="ph" href="storage-sleeve.html"><img src="images/storage-sleeve.jpg" alt="Storage Sleeve" loading="lazy"><span class="mat">Packs flat</span></a>
+        <div class="info">
+          <div class="name"><a href="storage-sleeve.html">Storage Sleeve</a> <span class="price">$11.50</span></div>
+          <p class="desc">Holds a rolled Outsak UL or UL micro at 0.3 oz, so the mesh keeps its shape between trips.</p>
+          <button class="add">Add to cart</button>
+          <a class="detail" href="storage-sleeve.html">See specs &amp; sizes →</a>
         </div>
       </article>
 
@@ -446,7 +465,7 @@
     document.body.classList.add('review');
     const n=document.createElement('div');
     n.className='reviewnote';
-    n.textContent='Review mode — dashed items still need confirming with David';
+    n.textContent='Review mode — every price on this page is now sourced from the old catalogue';
     document.body.prepend(n);
   }
 </script>

@@ -240,10 +240,29 @@
   }
   #storyPhoto{background-image:url(images/story-canyon.jpg);background-size:cover;background-position:center}
   .canyon-band{background-image:linear-gradient(rgba(18,9,4,.5),rgba(18,9,4,.62)),url(images/interlude-canyon.jpg);background-size:cover;background-position:center}
+
+  /* ---- touch targets: keep every interactive row at or above 44px ---- */
+  .cart{min-height:44px}
+  summary{min-height:44px}
+  .crumb a{display:inline-block;padding:.4rem 0}
+  @media(max-width:900px){
+    .cats button{min-height:44px;display:inline-flex;align-items:center}
+    .swatches button{min-height:48px}
+    .qty button{min-height:48px}
+    .btn{padding:1rem 1.7rem;min-height:48px}
+    .add{min-height:46px}
+    .detail{padding:.5rem 0}
+    details{padding:.55rem 0}
+    summary{min-height:48px}
+    .foot a{min-height:40px;display:flex;align-items:center}
+    .foot .contact a{min-height:44px}
+    .field input,.field select,.field textarea{min-height:48px;font-size:1rem}
+    .thumbs button{min-height:56px}
+  }
 </style>
 </head>
 <body>
-  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>3-year warranty on every Outsak</b></div>
+  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>Free U.S. shipping over $100</b> · $4 flat under</div>
 
   <header>
     <nav class="nav">
@@ -332,15 +351,15 @@
     </div>
 
     <div class="products">
-      <div class="card rev"><div class="ph"><img src="images/outsak-ultralight.jpg" alt="Outsak Ultralight" loading="lazy"></div><div class="info"><div class="name">Outsak Ultralight <span class="price">from $39</span></div><div class="desc">Animal-proof stainless wire-mesh bag. Two sizes, 2.5–3.4 oz.</div><button class="add">Add to cart</button></div></div>
-      <div class="card rev"><span class="flag">Best seller</span><div class="ph"><img src="images/outsak-spectrum.jpg" alt="Outsak Spectrum" loading="lazy"></div><div class="info"><div class="name">Outsak Spectrum <span class="price">from $40</span></div><div class="desc">Four sizes, 9&ndash;25.7 L, eight colors. For groups.</div><button class="add">Add to cart</button></div></div>
-      <div class="card rev"><div class="ph"><img src="images/outsak-ul-kit.jpg" alt="Outsak UL Kit" loading="lazy"></div><div class="info"><div class="name">Outsak UL Kit <span class="price">$64–71</span></div><div class="desc">Bag + slap-bag liner + storage sleeve. Save.</div><button class="add">Add to cart</button></div></div>
-      <div class="card rev"><div class="ph"><img src="images/bearikade-harness.jpg" alt="Bearikade Harness" loading="lazy"></div><div class="info"><div class="name">Bearikade Harness <span class="price">from $37.50</span></div><div class="desc">Straps your Bearikade canister to any pack.</div><button class="add">Add to cart</button></div></div>
-      <div class="card rev"><span class="flag">Lifetime warranty</span><div class="ph"><img src="images/adventure-seat.jpg" alt="Adventure Seat" loading="lazy"></div><div class="info"><div class="name">Adventure Seat <span class="price">from $32</span></div><div class="desc">Insulated, reflective, nearly indestructible sit pad.</div><button class="add">Add to cart</button></div></div>
-      <div class="card rev"><div class="ph"><img src="images/escape-pod.jpg" alt="Escape Pod Cooler" loading="lazy"></div><div class="info"><div class="name">Escape Pod Cooler <span class="price">from $39</span></div><div class="desc">Soft-sided, double-walled. Hot or cold.</div><button class="add">Add to cart</button></div></div>
-      <div class="card rev"><div class="ph"><img src="images/canyon-strap.jpg" alt="Canyon Strap" loading="lazy"></div><div class="info"><div class="name">Canyon Strap <span class="price">from $22</span></div><div class="desc">Reflective bottle harness. Fits Nalgene.</div><button class="add">Add to cart</button></div></div>
-      <div class="card rev"><div class="ph"><img src="images/flagstrap.jpg" alt="FlagStrap" loading="lazy"></div><div class="info"><div class="name">FlagStrap <span class="price">from $28</span></div><div class="desc">Hands-free crossbody carry. Two sizes.</div><button class="add">Add to cart</button></div></div>
-      <div class="card rev"><div class="ph"><img src="images/escape-pouch.jpg" alt="Escape Pouch" loading="lazy"></div><div class="info"><div class="name">Escape Pouch <span class="price">from $18</span></div><div class="desc">Freeze-dried food cozy. Fits Mountain House.</div><button class="add">Add to cart</button></div></div>
+      <div class="card rev"><div class="ph"><img src="images/outsak-ultralight.jpg" alt="Outsak Ultralight" loading="lazy"></div><div class="info"><div class="name"><a href="outsak.html">Outsak Ultralight</a> <span class="price">from $39</span></div><div class="desc">Animal-proof stainless wire-mesh bag. Two sizes, 2.5–3.4 oz.</div><button class="add">Add to cart</button></div></div>
+      <div class="card rev"><span class="flag">Best seller</span><div class="ph"><img src="images/outsak-spectrum.jpg" alt="Outsak Spectrum" loading="lazy"></div><div class="info"><div class="name"><a href="outsak.html">Outsak Spectrum</a> <span class="price">from $40</span></div><div class="desc">Four sizes, 9&ndash;25.7 L, eight colors. For groups.</div><button class="add">Add to cart</button></div></div>
+      <div class="card rev"><div class="ph"><img src="images/outsak-ul-kit.jpg" alt="Outsak UL Kit" loading="lazy"></div><div class="info"><div class="name"><a href="outsak-ul-kit.html">Outsak UL Kit</a> <span class="price">$64–71</span></div><div class="desc">Bag, liner and sleeve together — about $11 less than apart.</div><button class="add">Add to cart</button></div></div>
+      <div class="card rev"><div class="ph"><img src="images/bearikade-harness.jpg" alt="Bearikade Harness" loading="lazy"></div><div class="info"><div class="name"><a href="bearikade-harness.html">Bearikade Harness</a> <span class="price">$37.50–43.50</span></div><div class="desc">Clips a Bearikade to any pack. Four sizes, 2.2–2.4 oz.</div><button class="add">Add to cart</button></div></div>
+      <div class="card rev"><span class="flag">Lifetime warranty</span><div class="ph"><img src="images/adventure-seat.jpg" alt="Adventure Seat" loading="lazy"></div><div class="info"><div class="name"><a href="adventure-seat.html">Adventure Seat</a> <span class="price">$22.50–36.50</span></div><div class="desc">Cordura sit pad, R-value 4. Lifetime warranty.</div><button class="add">Add to cart</button></div></div>
+      <div class="card rev"><div class="ph"><img src="images/escape-pod.jpg" alt="Escape Pod Cooler" loading="lazy"></div><div class="info"><div class="name"><a href="escape-pod.html">Escape Pod Cooler</a> <span class="price">$25–33</span></div><div class="desc">Reflectix blocks 96% of radiant heat. From 2.4 oz.</div><button class="add">Add to cart</button></div></div>
+      <div class="card rev"><div class="ph"><img src="images/canyon-strap.jpg" alt="Canyon Strap" loading="lazy"></div><div class="info"><div class="name"><a href="canyon-strap.html">Canyon Strap</a> <span class="price">from $23.50</span></div><div class="desc">Reflective Nalgene holder. Five colours.</div><button class="add">Add to cart</button></div></div>
+      <div class="card rev"><div class="ph"><img src="images/flagstrap.jpg" alt="FlagStrap" loading="lazy"></div><div class="info"><div class="name"><a href="flagstrap.html">FlagStrap</a> <span class="price">$28–30</span></div><div class="desc">Hands-free crossbody carry, adjustable 33–63 in.</div><button class="add">Add to cart</button></div></div>
+      <div class="card rev"><div class="ph"><img src="images/escape-pouch.jpg" alt="Escape Pouch" loading="lazy"></div><div class="info"><div class="name"><a href="escape-pouch.html">Escape Pouch</a> <span class="price">from $24</span></div><div class="desc">Meal cozy for Mountain House pouches. 1.1 oz.</div><button class="add">Add to cart</button></div></div>
     </div>
   </section>
 

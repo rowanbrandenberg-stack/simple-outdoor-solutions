@@ -209,10 +209,29 @@
   body.review [data-est]{position:relative;outline:2px dashed var(--gold);outline-offset:3px;border-radius:4px}
   body.review [data-est]::after{content:'CONFIRM';position:absolute;top:-1.1rem;right:0;font-family:'Space Mono',monospace;font-size:.54rem;letter-spacing:.1em;background:var(--gold);color:var(--ink);padding:.05rem .3rem;border-radius:3px;font-weight:700}
   .reviewnote{display:block;background:var(--gold);color:var(--ink);text-align:center;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1rem}
+
+  /* ---- touch targets: keep every interactive row at or above 44px ---- */
+  .cart{min-height:44px}
+  summary{min-height:44px}
+  .crumb a{display:inline-block;padding:.4rem 0}
+  @media(max-width:900px){
+    .cats button{min-height:44px;display:inline-flex;align-items:center}
+    .swatches button{min-height:48px}
+    .qty button{min-height:48px}
+    .btn{padding:1rem 1.7rem;min-height:48px}
+    .add{min-height:46px}
+    .detail{padding:.5rem 0}
+    details{padding:.55rem 0}
+    summary{min-height:48px}
+    .foot a{min-height:40px;display:flex;align-items:center}
+    .foot .contact a{min-height:44px}
+    .field input,.field select,.field textarea{min-height:48px;font-size:1rem}
+    .thumbs button{min-height:56px}
+  }
 </style>
 </head>
 <body>
-  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>3-year warranty on every Outsak</b></div>
+  <div class="announce">Handmade in Flagstaff, Arizona since 2008 · <b>Free U.S. shipping over $100</b> · $4 flat under</div>
 
   <header>
     <nav class="nav">
@@ -296,6 +315,7 @@
         <li>Sewn by hand in Flagstaff, Arizona — made in the USA</li>
         <li>Spectrum sizes ship with a free lightweight carry strap</li>
         <li>Three-year warranty on every Outsak</li>
+        <li>Free U.S. shipping over $100 &middot; $4 flat under</li>
         <li>Questions on sizing? Email <a href="mailto:info@simpleoutdoorstore.com" style="text-decoration:underline">info@simpleoutdoorstore.com</a></li>
       </ul>
 
@@ -373,7 +393,7 @@
         </tbody>
       </table>
     </div>
-    <p class="caveat rev"><b>Worth being straight about:</b> the Outsak is built for rodents and small critters — the animals that actually ruin most trips. It is <b>not</b> a certified bear-resistant container. Where a hard-sided canister is required by regulation, carry one (and our <a href="shop.html#straps" style="color:var(--rust-deep);text-decoration:underline">Bearikade Harness</a> makes it easier to carry). Check the rules for the unit you're entering before you go.</p>
+    <p class="caveat rev"><b>Worth being straight about:</b> the Outsak is built for rodents and small critters — the animals that actually ruin most trips. It is <b>not</b> a certified bear-resistant container. Where a hard-sided canister is required by regulation, carry one (and our <a href="bearikade-harness.html" style="color:var(--rust-deep);text-decoration:underline">Bearikade Harness</a> makes it easier to carry). Check the rules for the unit you're entering before you go.</p>
   </section>
 
   <!-- ============ CRAFT ============ -->
@@ -404,13 +424,13 @@
       <p>Go by volume first. The Ultralight covers 4.3 L and 7.5 L for solo and weekend trips at 2.5–3.4 oz. The Spectrum runs 9, 12.15, 20.5, and 25.7 L for groups, base camps, and longer stretches between resupply. The <a href="#sizes" style="color:var(--rust-deep);text-decoration:underline">full size chart</a> has every dimension — or <a href="contact.html" style="color:var(--rust-deep);text-decoration:underline">send us a note</a> describing the trip.</p></details>
 
     <details class="rev"><summary>Won't the mesh crush my food?</summary>
-      <p>The mesh is flexible, so it forms around what's inside rather than forcing a shape on it. For powdered dinners, crumbs, and anything you'd rather not push through steel, add a <a href="shop.html#food" style="color:var(--rust-deep);text-decoration:underline">Slap Bag</a> liner.</p></details>
+      <p>The mesh is flexible, so it forms around what's inside rather than forcing a shape on it. For powdered dinners, crumbs, and anything you'd rather not push through steel, add a <a href="slap-bag.html" style="color:var(--rust-deep);text-decoration:underline">Slap Bag</a> liner.</p></details>
 
     <details class="rev"><summary>How do I hang it or stash it?</summary>
       <p>In country without bears you can tuck it into a rock crevice or leave it under a tree. In bear country, hang it using proper hanging technique. One thing not to do: <b>don't stake it to the ground</b> — that gives an animal leverage to work against. And never store it, or anything scented, in your tent or near where you sleep.</p></details>
 
     <details class="rev"><summary>How long does it last, and what's the warranty?</summary>
-      <p>Every Outsak carries a <b>three-year warranty</b>. In practice the stainless mesh doesn't rot, rust out, or hold odour, so it tends to outlive the gear around it. Rinse it, let it dry, and fold it flat in a <a href="shop.html#accessories" style="color:var(--rust-deep);text-decoration:underline">Storage Sleeve</a> between trips.</p></details>
+      <p>Every Outsak carries a <b>three-year warranty</b>. In practice the stainless mesh doesn't rot, rust out, or hold odour, so it tends to outlive the gear around it. Rinse it, let it dry, and fold it flat in a <a href="storage-sleeve.html" style="color:var(--rust-deep);text-decoration:underline">Storage Sleeve</a> between trips.</p></details>
 
     <details class="rev"><summary>Does it keep smells in?</summary>
       <p>No — mesh isn't an odour barrier, and it isn't meant to be. If you want scent control, put an odour-proof liner bag inside it. That's optional, not required.</p></details>
@@ -421,17 +441,17 @@
     <div class="pw">
       <div class="rev"><div class="kick">Goes with it</div></div>
       <div class="pgrid">
-        <a class="pcard rev" href="shop.html#food">
+        <a class="pcard rev" href="slap-bag.html">
           <div class="ph"><img src="images/slap-bag.jpg" alt="Slap Bag liner" loading="lazy"></div>
-          <div class="i"><div class="n">Slap Bag <span class="pr" data-est>$12–16</span></div><div class="d">Ripstop liner — keeps crumbs off the mesh.</div></div>
+          <div class="i"><div class="n">Slap Bag <span class="pr">$25–29</span></div><div class="d">Sil nylon liner — keeps crumbs off the mesh.</div></div>
         </a>
-        <a class="pcard rev" href="shop.html#accessories">
+        <a class="pcard rev" href="storage-sleeve.html">
           <div class="ph"><img src="images/storage-sleeve.jpg" alt="Storage sleeve" loading="lazy"></div>
-          <div class="i"><div class="n">Storage Sleeve <span class="pr" data-est>from $10</span></div><div class="d">Keeps it folded flat between trips.</div></div>
+          <div class="i"><div class="n">Storage Sleeve <span class="pr">$11.50</span></div><div class="d">Holds a rolled Outsak at 0.3 oz.</div></div>
         </a>
-        <a class="pcard rev" href="shop.html#straps">
+        <a class="pcard rev" href="bearikade-harness.html">
           <div class="ph"><img src="images/bearikade-harness.jpg" alt="Bearikade harness" loading="lazy"></div>
-          <div class="i"><div class="n">Bearikade Harness <span class="pr">from $37.50</span></div><div class="d">For the trips where a canister is required.</div></div>
+          <div class="i"><div class="n">Bearikade Harness <span class="pr">$37.50–43.50</span></div><div class="d">For the trips where a canister is required.</div></div>
         </a>
       </div>
     </div>
@@ -517,7 +537,7 @@
     document.body.classList.add('review');
     const n=document.createElement('div');
     n.className='reviewnote';
-    n.textContent='Review mode — dashed items still need confirming with David';
+    n.textContent='Review mode — every price and spec on this page is sourced from the old catalogue';
     document.body.prepend(n);
   }
 </script>
