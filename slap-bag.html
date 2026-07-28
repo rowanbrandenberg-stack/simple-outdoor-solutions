@@ -20,6 +20,7 @@
         <span class="full">Simple Outdoor Solutions<small>Flagstaff, AZ · est. 2008</small></span>
       </a>
       <div class="menu">
+        <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
         <a href="outsak.html">The Outsak</a>
         <a href="story.html">Our Story</a>
@@ -214,7 +215,7 @@
   let n=0;const badge=document.querySelector('.cart .badge'),addBtn=document.getElementById('addBtn');
   if(addBtn) addBtn.addEventListener('click',()=>{
     n+=q;badge.textContent=n;
-    addBtn.textContent='Added ✓';addBtn.style.background='var(--pine)';
+    addBtn.textContent='Added ✓';addBtn.style.background='var(--bark)';
     setTimeout(()=>{addBtn.textContent='Add to cart';addBtn.style.background=''},1100);
   });
 </script>

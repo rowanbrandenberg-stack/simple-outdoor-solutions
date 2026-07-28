@@ -13,7 +13,7 @@
     --sand:#f3ebdd; --sand-2:#e9dcc6; --sand-3:#ded0b6;
     --ink:#211b13; --ink-2:#2f2719; --ink-soft:#5c5240;
     --rust:#bf5327; --rust-deep:#9a3f1c;
-    --pine:#2f5d4e; --pine-deep:#1e3f34;
+    --bark:#6a4529; --bark-deep:#33241a;
     --gold:#e2a44b; --stone:#8a7d68;
     --line:rgba(33,27,19,.14);
     --paper-grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -30,7 +30,7 @@
   .topo{position:absolute;inset:0;z-index:0;opacity:.10;background-image:var(--topo);pointer-events:none}
 
   /* header */
-  .announce{background:var(--pine-deep);color:var(--sand);text-align:center;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1rem}
+  .announce{background:var(--bark-deep);color:var(--sand);text-align:center;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1rem}
   .announce b{color:var(--gold);font-weight:700}
   header{position:sticky;top:0;z-index:100;background:rgba(243,235,221,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem clamp(1.2rem,4vw,3.5rem);gap:2rem}
@@ -135,7 +135,7 @@
   /* ---------- comparison ---------- */
   .compare{max-width:1180px;margin:0 auto;padding:clamp(3.5rem,8vh,5.5rem) clamp(1.2rem,4vw,3.5rem)}
   .compare h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.02;letter-spacing:-.025em;max-width:20ch}
-  .compare h2 em{font-style:normal;color:var(--pine)}
+  .compare h2 em{font-style:normal;color:var(--bark)}
   .tablewrap{overflow-x:auto;margin-top:2.2rem;border:1px solid var(--line);border-radius:12px;background:var(--sand-2)}
   table.cmp{width:100%;border-collapse:collapse;min-width:600px}
   table.cmp th,table.cmp td{padding:1rem 1.1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.9rem}
@@ -148,7 +148,7 @@
   .caveat b{color:var(--rust-deep)}
 
   /* ---------- craft band ---------- */
-  .craft{background:var(--pine-deep);color:var(--sand);position:relative;overflow:hidden;isolation:isolate}
+  .craft{background:var(--bark-deep);color:var(--sand);position:relative;overflow:hidden;isolation:isolate}
   .craft .topo{opacity:.07;filter:invert(1)}
   .cb{max-width:1180px;margin:0 auto;padding:clamp(3.5rem,8vh,5.5rem) clamp(1.2rem,4vw,3.5rem);display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;position:relative;z-index:1}
   @media(max-width:860px){.cb{grid-template-columns:1fr}}
@@ -245,6 +245,7 @@
         <span class="full">Simple Outdoor Solutions<small>Flagstaff, AZ · est. 2008</small></span>
       </a>
       <div class="menu">
+        <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
         <a href="outsak.html" aria-current="page">The Outsak</a>
         <a href="story.html">Our Story</a>
@@ -535,7 +536,7 @@
   let n=0;const badge=document.querySelector('.cart .badge'),addBtn=document.getElementById('addBtn');
   addBtn.addEventListener('click',()=>{
     n+=q;badge.textContent=n;
-    addBtn.textContent='Added ✓';addBtn.style.background='var(--pine)';
+    addBtn.textContent='Added ✓';addBtn.style.background='var(--bark)';
     setTimeout(()=>{addBtn.textContent='Add to cart';addBtn.style.background=''},1100);
   });
 

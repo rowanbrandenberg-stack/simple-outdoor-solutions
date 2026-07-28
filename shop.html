@@ -13,7 +13,7 @@
     --sand:#f3ebdd; --sand-2:#e9dcc6; --sand-3:#ded0b6;
     --ink:#211b13; --ink-2:#2f2719; --ink-soft:#5c5240;
     --rust:#bf5327; --rust-deep:#9a3f1c;
-    --pine:#2f5d4e; --pine-deep:#1e3f34;
+    --bark:#6a4529; --bark-deep:#33241a;
     --gold:#e2a44b; --stone:#8a7d68;
     --line:rgba(33,27,19,.14);
     --paper-grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -30,7 +30,7 @@
   .topo{position:absolute;inset:0;z-index:0;opacity:.10;background-image:var(--topo);pointer-events:none}
 
   /* ---------- announcement + header ---------- */
-  .announce{background:var(--pine-deep);color:var(--sand);text-align:center;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1rem}
+  .announce{background:var(--bark-deep);color:var(--sand);text-align:center;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1rem}
   .announce b{color:var(--gold);font-weight:700}
   header{position:sticky;top:0;z-index:100;background:rgba(243,235,221,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem clamp(1.2rem,4vw,3.5rem);gap:2rem}
@@ -180,6 +180,7 @@
         <span class="full">Simple Outdoor Solutions<small>Flagstaff, AZ · est. 2008</small></span>
       </a>
       <div class="menu">
+        <a href="index.html">Home</a>
         <a href="shop.html" aria-current="page">Shop</a>
         <a href="outsak.html">The Outsak</a>
         <a href="story.html">Our Story</a>
@@ -462,7 +463,7 @@
   document.querySelectorAll('.add').forEach(btn=>btn.addEventListener('click',()=>{
     n++;badge.textContent=n;
     const t=btn.textContent;btn.textContent='Added ✓';
-    btn.style.background='var(--pine)';btn.style.color='var(--sand)';btn.style.borderColor='var(--pine)';
+    btn.style.background='var(--bark)';btn.style.color='var(--sand)';btn.style.borderColor='var(--bark)';
     setTimeout(()=>{btn.textContent=t;btn.style.background='';btn.style.color='';btn.style.borderColor=''},1100);
   }));
 
