@@ -652,6 +652,7 @@ FOOTER = """
     </div>
     <p class="tm">""" + WARNING + """</p>
     <p class="tm">""" + FOOT_TM + """</p>
+    <p class="credit">Site by <a href="https://rj-labs.com" target="_blank" rel="noopener">RJ Labs LLC</a></p>
   </footer>
 
 <script>

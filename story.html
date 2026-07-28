@@ -93,6 +93,10 @@
     .field input,.field select,.field textarea{min-height:48px;font-size:1rem}
     .thumbs button{min-height:56px}
   }
+  /* site credit */
+  .credit{max-width:1180px;margin:1.4rem auto 0;text-align:center;font-family:'Space Mono',monospace;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,235,221,.3)}
+  .credit a{color:rgba(243,235,221,.48);border-bottom:1px solid rgba(243,235,221,.18);padding-bottom:1px;transition:color .25s,border-color .25s}
+  .credit a:hover{color:var(--gold);border-bottom-color:var(--gold)}
 </style>
 </head>
 <body>
@@ -167,6 +171,8 @@
       <div class="col"><h4>Reach us</h4><span>11600 N Onika Ln<br>Flagstaff, AZ</span><a href="mailto:info@simpleoutdoorstore.com">info@simpleoutdoorstore.com</a></div>
     </div>
     <div class="foot-bottom"><span>© 2026 Simple Outdoor Solutions, LLC</span><span>✦ Handmade in Flagstaff, AZ · Made in USA</span></div>
+  
+    <p class="credit">Site by <a href="https://rj-labs.com" target="_blank" rel="noopener">RJ Labs LLC</a></p>
   </footer>
 <script>
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-vis');io.unobserve(e.target)}})},{threshold:.16});
