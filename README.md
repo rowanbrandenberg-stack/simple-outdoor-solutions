@@ -9,7 +9,10 @@ self-contained HTML file with its CSS and JS inline; all images live in `/images
 index.html               Homepage — canyon hero, Outsak spotlight, featured grid
 story.html               Our Story — canyon origin, workbench, small batches
 shop.html                Full catalog — 14 products, filterable, deep-linkable
-contact.html             Contact form, address/email, shipping & warranty
+contact.html             Contact form + where we are + signposts
+faq.html                 Grouped FAQ — ordering, Outsak, coolers, straps, warranty
+shipping.html            Rates, turnaround, international, returns
+warranty.html            Terms per product, what's covered, how to claim
 
 outsak.html              Outsak UL + Spectrum — 6-size chart, canister comparison
 outsak-ul-kit.html       Kit: bag + liner + sleeve
@@ -25,8 +28,9 @@ escape-pouch.html        Freeze-dried meal cozy
 trail-bag.html           Dyneema zippered gear bags
 adventure-seat.html      Cordura sit pad (lifetime warranty)
 
-product.css              Shared stylesheet for the 12 generated product pages
-build_products.py        Generator — edit the PRODUCTS dict, re-run, pages rebuild
+product.css              Shared stylesheet for the generated product + policy pages
+build_products.py        Product page generator — edit PRODUCTS, re-run
+build_pages.py           FAQ / shipping / warranty generator (imports build_products)
 images/                  All optimized JPGs + the transparent SOS logo PNG
 sos-site/                Older duplicate of index/story/images — safe to delete
 ```
