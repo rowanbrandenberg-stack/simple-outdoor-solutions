@@ -185,6 +185,28 @@ attribution.
   It also has no founding story and never mentions the Grand Canyon — the canyon framing is
   ours.
 
+
+## Privacy / contact policy
+
+The street address (11600 N Onika Ln) has been **removed from every page** at the
+owner's request, along with the phone number and any "visit us" wording. The only
+contact channel on the site is **info@simpleoutdoorstore.com**, plus the form on
+contact.html which composes a mailto to that address. Footers say "Handmade in
+Flagstaff, Arizona" with no street address.
+
+## Image aspect ratios
+
+Every product studio shot is 1100×825 (4:3) and drops straight into the 4:3 frames.
+Two are square (1254×1254) and were being cropped: `outsak-macro.jpg` and
+`outsak-stack.jpg`. They now have companions — `outsak-macro-4x3.jpg` and
+`outsak-stack-4x3.jpg` — recomposed onto a 4:3 canvas so the whole bag is visible
+and centred, with the tan backdrop extended around it rather than a letterbox bar.
+
+Use the **4x3 files in 4:3 containers** (the Outsak gallery frame, the shop cross-sell
+band, the "goes with it" cards) and the **square originals in square or portrait
+containers** (the homepage spotlight, the gallery thumbnails, the story page shot).
+`build_products.py` already points the cross-sell table at the 4:3 version.
+
 ## Reviews on the homepage
 
 | Quote | Source | Note |

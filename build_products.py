@@ -574,7 +574,7 @@ PRODUCTS = [
 # ------------------------------------------------------------------ cross-sell
 
 CROSS = {
-  'outsak':               ('The Outsak',            'outsak.html',               'outsak-macro.jpg',      'from $39',      'Animal-proof stainless wire mesh.'),
+  'outsak':               ('The Outsak',            'outsak.html',               'outsak-macro-4x3.jpg',      'from $39',      'Animal-proof stainless wire mesh.'),
   'outsak-ul-kit':        ('Outsak UL Kit',         'outsak-ul-kit.html',        'outsak-ul-kit.jpg',     '$64–71',        'Bag, liner and sleeve together.'),
   'slap-bag':             ('Slap Bag',              'slap-bag.html',             'slap-bag.jpg',          '$25–29',        'Sil nylon liner for the Outsak UL.'),
   'overkill-slap-bag':    ('Overkill Slap Bag',     'overkill-slap-bag.html',    'overkill-slap-bag.jpg', '$55–65',        'Dyneema liner, ten colours.'),
@@ -641,8 +641,8 @@ FOOTER = """
         <a href="story.html">Our Story</a><a href="contact.html#warranty">Warranty</a><a href="contact.html#shipping">Shipping &amp; Returns</a><a href="contact.html">Contact</a>
       </div>
       <div class="contact">
-        <h4>Visit / Reach us</h4>
-        <span>11600 N Onika Ln<br>Flagstaff, AZ</span>
+        <h4>Reach us</h4>
+        <span>Handmade in Flagstaff, Arizona</span>
         <a href="mailto:info@simpleoutdoorstore.com">info@simpleoutdoorstore.com</a>
       </div>
     </div>
